@@ -1,0 +1,17 @@
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.DataContext.deps.json
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.DataContext.runtimeconfig.json
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.DataContext.dll
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.DataContext.pdb
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.Repository.dll
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\bin\Debug\net9.0\CheckBox.Repository.pdb
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.csproj.AssemblyReference.cache
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.AssemblyInfoInputs.cache
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.AssemblyInfo.cs
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.csproj.CoreCompileInputs.cache
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.EFE21CEB.Up2Date
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.dll
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\refint\CheckBox.DataContext.dll
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.pdb
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\CheckBox.DataContext.genruntimeconfig.cache
+D:\programming\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.DataContext\obj\Debug\net9.0\ref\CheckBox.DataContext.dll
