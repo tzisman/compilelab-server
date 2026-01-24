@@ -1,4 +1,5 @@
 ﻿using CheckBox.Repository.Entities;
+using CheckBox.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,16 +7,20 @@ using System.Reflection.Emit;
 
 namespace CheckBox.DataContext
 {
-    public class CheckBoxContext: DbContext
+    public class CheckBoxContext(DbContextOptions<CheckBoxContext> options) : DbContext(options), IContext
     {
-        public CheckBoxContext(DbContextOptions<CheckBoxContext> options) : base(options) { }
-
         public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<UserInCourse> UsersInCourses { get; set; }
+        public DbSet<UserInCourse> UserInCourses { get; set; }
         public DbSet<CodeExercise> CodeExercises { get; set; }
         public DbSet<StudentAnswer> StudentAnswers { get; set; }
         public DbSet<TestCase> TestCases { get; set; }
+
+
+        public async Task Save()
+        {
+            await SaveChangesAsync();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
