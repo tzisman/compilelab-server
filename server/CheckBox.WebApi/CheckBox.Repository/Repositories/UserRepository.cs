@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Repository.Repositories
 {
-    internal class UserRepository(IContext context) : IRepository<User>
+    public class UserRepository(IContext context) : IRepository<User>
     {
         private readonly IContext _ctx = context;
 
@@ -45,7 +45,7 @@ namespace CheckBox.Repository.Repositories
             return null;
         }
 
-        public async Task<User> UpdateItem(int id, User item)
+        public async Task<User?> UpdateItem(int id, User item)
         {
             var user = await _ctx.Users.FirstOrDefaultAsync(x => x.Id == id);
             if (user != null)

@@ -15,6 +15,7 @@ namespace CheckBox.Service.Services
     {
         public static IServiceCollection AddServices(this IServiceCollection services, string connectionString)
         {
+            services.AddAutoMapper(typeof(MapperProfile));
             services.AddDataLayer(connectionString);
             services.AddRepository();
             services.AddScoped<IRegister<UserRegisterDto>, UserRegister>();

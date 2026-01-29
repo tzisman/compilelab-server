@@ -16,17 +16,23 @@ namespace CheckBox.WebApi.Controllers
         }
             
         [HttpPost("register")]
-        public IActionResult Register([FromBody] UserRegisterDto user)
+        public async Task<IActionResult> Register([FromBody] UserRegisterDto user)
         {
             try
             {
-                var result = _service.Register(user);
+                var result = await _service.Register(user);
                 return Ok(result);
             }
-            catch 
+            catch(Exception ex) 
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet]
+        public async Task<List<BabyDto>> GetALl()
+        {
+            return await service.GetAll();
         }
     }
 }

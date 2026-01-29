@@ -1,4 +1,7 @@
-﻿using CheckBox.Service.Dto;
+﻿using AutoMapper;
+using CheckBox.Repository.Entities;
+using CheckBox.Repository.Interfaces;
+using CheckBox.Service.Dto;
 using CheckBox.Service.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,31 +11,40 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Service.Services
 {
-    public class UserService : IService<UserDto>
+    public class UserService(IRepository<User> repository, IMapper mapper) : IService<UserDto>
     {
+        private readonly IRepository<User> _repository = repository;
+        private readonly IMapper _mapper = mapper;
         public Task<UserDto> AddItem(UserDto item)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteItem(int id)
+        public async Task DeleteItem(int id)
         {
-            throw new NotImplementedException();
+            await _repository.DeleteItem(id);
         }
 
-        public Task<List<UserDto>> GetAll()
+        public async Task<List<UserDto>> GetAll()
         {
-            throw new NotImplementedException();
+            var users = await _repository.GetAll();
+            var usersDto = _mapper.Map<List<UserDto>>(users);
+            return usersDto;
         }
 
-        public Task<UserDto> GetById(int id)
+        public async Task<UserDto> GetById(int id)
         {
-            throw new NotImplementedException();
+            var user = await _repository.GetById(id);
+            var userDto = _mapper.Map<UserDto>(user);
+            return userDto;
         }
 
-        public Task<UserDto> UpdateItem(int id, UserDto item)
+        public async Task<UserDto> UpdateItem(int id, UserDto item)
         {
-            throw new NotImplementedException();
+            var user = _mapper.Map<User>(item);
+            var result =await _repository.UpdateItem(id, user);
+            var userDto = _mapper.Map<UserDto>(result);
+            return userDto;
         }
     }
 }

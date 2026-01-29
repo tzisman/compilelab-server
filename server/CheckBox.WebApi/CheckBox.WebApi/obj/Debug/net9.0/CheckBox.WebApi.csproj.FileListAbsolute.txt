@@ -341,6 +341,5 @@ D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox
 D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\AutoMapper.dll
 D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\System.Diagnostics.DiagnosticSource.dll
 D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\CheckBox.Service.dll
 D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.WebApi\bin\Debug\net9.0\CheckBox.Service.pdb
