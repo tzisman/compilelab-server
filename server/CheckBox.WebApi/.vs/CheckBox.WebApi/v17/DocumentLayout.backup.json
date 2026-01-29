@@ -3,48 +3,96 @@
   "WorkspaceRootPath": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\services\\extensionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\services\\extensionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.datacontext\\checkboxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|solutionrelative:checkbox.datacontext\\checkboxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\interfaces\\iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\interfaces\\iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.datacontext\\dataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|solutionrelative:checkbox.datacontext\\dataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\checkbox.service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\checkbox.service.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\interfaces\\iservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\repositories\\extensionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\repositories\\extensionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\interfaces\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\interfaces\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\checkbox.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\checkbox.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\dto\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\checkbox.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\checkbox.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.datacontext\\checkboxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|solutionrelative:checkbox.datacontext\\checkboxcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\controllers\\usercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\controllers\\usercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\services\\userregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\services\\userregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.service\\services\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CheckBox.Service\\CheckBox.Service.csproj|solutionrelative:checkbox.service\\services\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\checkbox.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\checkbox.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CheckBox.WebApi\\CheckBox.WebApi.csproj|solutionrelative:checkbox.webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\interfaces\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\interfaces\\icontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\checkbox.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\checkbox.repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.datacontext\\migrations\\20260123093634_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.datacontext\\checkbox.datacontext.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A5164B77-4BBD-4512-852C-5AE0D872384F}|CheckBox.DataContext\\CheckBox.DataContext.csproj|solutionrelative:checkbox.datacontext\\checkbox.datacontext.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|solutionrelative:checkbox.repository\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CheckBox.Repository\\CheckBox.Repository.csproj|d:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\checkbox-onlinejudge\\server\\checkbox.webapi\\checkbox.repository\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,77 +130,259 @@
       "DocumentGroups": [
         {
           "DockedHeight": 97,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "DataExtensions.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\DataExtensions.cs",
+              "RelativeDocumentMoniker": "CheckBox.DataContext\\DataExtensions.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\DataExtensions.cs*",
+              "RelativeToolTip": "CheckBox.DataContext\\DataExtensions.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T19:39:15.397Z",
+              "WhenOpened": "2026-01-29T07:21:42.512Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\Program.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Program.cs*",
+              "RelativeToolTip": "CheckBox.WebApi\\Program.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAlwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:24:13.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Services\\UserService.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\UserService.cs",
+              "RelativeToolTip": "CheckBox.Service\\Services\\UserService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T11:40:07.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExtensionService.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\ExtensionService.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Services\\ExtensionService.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\ExtensionService.cs*",
+              "RelativeToolTip": "CheckBox.Service\\Services\\ExtensionService.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T20:02:24.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckBox.Service.csproj",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj",
+              "RelativeDocumentMoniker": "CheckBox.Service\\CheckBox.Service.csproj",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj*",
+              "RelativeToolTip": "CheckBox.Service\\CheckBox.Service.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-24T19:41:22.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRegister.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Interfaces\\IRegister.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Interfaces\\IRegister.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Interfaces\\IRegister.cs",
+              "RelativeToolTip": "CheckBox.Service\\Interfaces\\IRegister.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T10:29:15.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Dto\\UserDto.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Dto\\UserDto.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Dto\\UserDto.cs",
+              "RelativeToolTip": "CheckBox.Service\\Dto\\UserDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T21:50:06.995Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "CheckBox.Repository\\Repositories\\UserRepository.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "CheckBox.Repository\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-25T21:12:24.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "CheckBox.WebApi\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-25T19:31:05.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IService.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Interfaces\\IService.cs",
               "RelativeDocumentMoniker": "CheckBox.Service\\Interfaces\\IService.cs",
               "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Interfaces\\IService.cs",
               "RelativeToolTip": "CheckBox.Service\\Interfaces\\IService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowA4AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAywA4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-24T19:35:30.729Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Class1.cs",
-              "RelativeDocumentMoniker": "CheckBox.Service\\Class1.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Class1.cs",
-              "RelativeToolTip": "CheckBox.Service\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ExtensionRepository.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Repositories\\ExtensionRepository.cs",
+              "RelativeDocumentMoniker": "CheckBox.Repository\\Repositories\\ExtensionRepository.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Repositories\\ExtensionRepository.cs",
+              "RelativeToolTip": "CheckBox.Repository\\Repositories\\ExtensionRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T19:33:47.954Z",
+              "WhenOpened": "2026-01-28T20:13:50.132Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "CheckBox.Repository\\Interfaces\\IRepository.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "CheckBox.Repository\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA9wAgAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "UserRegisterDto.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Dto\\UserRegisterDto.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Dto\\UserRegisterDto.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Dto\\UserRegisterDto.cs",
+              "RelativeToolTip": "CheckBox.Service\\Dto\\UserRegisterDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T19:32:44.411Z",
+              "WhenOpened": "2026-01-28T19:42:59.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IContext.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IContext.cs",
-              "RelativeDocumentMoniker": "CheckBox.Repository\\Interfaces\\IContext.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IContext.cs",
-              "RelativeToolTip": "CheckBox.Repository\\Interfaces\\IContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T19:25:39.766Z",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\appsettings.json",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\appsettings.json",
+              "RelativeToolTip": "CheckBox.WebApi\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T09:23:05.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CheckBox.Repository",
+              "DocumentIndex": 12,
+              "Title": "CheckBoxContext.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBoxContext.cs",
+              "RelativeDocumentMoniker": "CheckBox.DataContext\\CheckBoxContext.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBoxContext.cs",
+              "RelativeToolTip": "CheckBox.DataContext\\CheckBoxContext.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:11:57.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserControler.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\UserControler.cs",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\Controllers\\UserControler.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\UserControler.cs",
+              "RelativeToolTip": "CheckBox.WebApi\\Controllers\\UserControler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T18:37:25.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRegister.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\UserRegister.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Services\\UserRegister.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\UserRegister.cs",
+              "RelativeToolTip": "CheckBox.Service\\Services\\UserRegister.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T10:32:05.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MapperProfile.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\MapperProfile.cs",
+              "RelativeDocumentMoniker": "CheckBox.Service\\Services\\MapperProfile.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\Services\\MapperProfile.cs",
+              "RelativeToolTip": "CheckBox.Service\\Services\\MapperProfile.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T10:47:12.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\User.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\User.cs",
+              "RelativeToolTip": "CheckBox.Repository\\Entities\\User.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:06:15.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CheckBox.WebApi.csproj",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\CheckBox.WebApi.csproj",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\CheckBox.WebApi.csproj",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\CheckBox.WebApi.csproj",
+              "RelativeToolTip": "CheckBox.WebApi\\CheckBox.WebApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-23T09:30:37.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CheckBox.Repository.csproj",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
               "RelativeDocumentMoniker": "CheckBox.Repository\\CheckBox.Repository.csproj",
               "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
@@ -168,72 +394,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CheckBox.WebApi.csproj",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\CheckBox.WebApi.csproj",
-              "RelativeDocumentMoniker": "CheckBox.WebApi\\CheckBox.WebApi.csproj",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\CheckBox.WebApi.csproj",
-              "RelativeToolTip": "CheckBox.WebApi\\CheckBox.WebApi.csproj",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-23T09:30:37.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "CheckBox.WebApi\\Program.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Program.cs",
-              "RelativeToolTip": "CheckBox.WebApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAANAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "CheckBox.Repository\\Interfaces\\IRepository.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "CheckBox.Repository\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:24:13.46Z",
+              "WhenOpened": "2026-01-24T19:32:44.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CheckBoxContext.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBoxContext.cs",
-              "RelativeDocumentMoniker": "CheckBox.DataContext\\CheckBoxContext.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBoxContext.cs",
-              "RelativeToolTip": "CheckBox.DataContext\\CheckBoxContext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA3wEcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "IContext.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IContext.cs",
+              "RelativeDocumentMoniker": "CheckBox.Repository\\Interfaces\\IContext.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Interfaces\\IContext.cs",
+              "RelativeToolTip": "CheckBox.Repository\\Interfaces\\IContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwAoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:11:57.961Z",
+              "WhenOpened": "2026-01-24T19:25:39.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Class1.cs",
-              "RelativeDocumentMoniker": "CheckBox.Repository\\Class1.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Class1.cs",
-              "RelativeToolTip": "CheckBox.Repository\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "CheckBox.WebApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-24T19:27:10.685Z",
+              "WhenOpened": "2026-01-24T19:39:15.397Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\appsettings.json",
-              "RelativeDocumentMoniker": "CheckBox.WebApi\\appsettings.json",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.WebApi\\appsettings.json",
-              "RelativeToolTip": "CheckBox.WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-23T09:23:05.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 23,
               "Title": "20260123093634_InitialCreate.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\Migrations\\20260123093634_InitialCreate.cs",
               "RelativeDocumentMoniker": "CheckBox.DataContext\\Migrations\\20260123093634_InitialCreate.cs",
@@ -241,11 +441,12 @@
               "RelativeToolTip": "CheckBox.DataContext\\Migrations\\20260123093634_InitialCreate.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:36:34.852Z"
+              "WhenOpened": "2026-01-23T09:36:34.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 24,
               "Title": "CheckBox.DataContext.csproj",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj",
               "RelativeDocumentMoniker": "CheckBox.DataContext\\CheckBox.DataContext.csproj",
@@ -258,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "TestCase.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\TestCase.cs",
               "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\TestCase.cs",
@@ -266,35 +467,38 @@
               "RelativeToolTip": "CheckBox.Repository\\Entities\\TestCase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:42:31.774Z"
+              "WhenOpened": "2026-01-23T08:42:31.774Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
               "Title": "CodeExercise.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\CodeExercise.cs",
               "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\CodeExercise.cs",
               "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\CodeExercise.cs",
               "RelativeToolTip": "CheckBox.Repository\\Entities\\CodeExercise.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:39:01.108Z"
+              "WhenOpened": "2026-01-23T08:39:01.108Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "StudentAnswer.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\StudentAnswer.cs",
               "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\StudentAnswer.cs",
               "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\StudentAnswer.cs",
               "RelativeToolTip": "CheckBox.Repository\\Entities\\StudentAnswer.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA8wCIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:37:49.776Z"
+              "WhenOpened": "2026-01-23T08:37:49.776Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 29,
               "Title": "UserInCourse.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\UserInCourse.cs",
               "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\UserInCourse.cs",
@@ -302,31 +506,21 @@
               "RelativeToolTip": "CheckBox.Repository\\Entities\\UserInCourse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:21:57.79Z"
+              "WhenOpened": "2026-01-23T08:21:57.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 25,
               "Title": "Course.cs",
               "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\Course.cs",
               "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\Course.cs",
               "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\Course.cs",
               "RelativeToolTip": "CheckBox.Repository\\Entities\\Course.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBZwAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:18:47.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "CheckBox.Repository\\Entities\\User.cs",
-              "ToolTip": "D:\\programming\\\u05E4\u05E8\u05D5\u05D9\u05E7\u05D8\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\Entities\\User.cs",
-              "RelativeToolTip": "CheckBox.Repository\\Entities\\User.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T08:06:15.772Z"
+              "WhenOpened": "2026-01-23T08:18:47.777Z",
+              "EditorCaption": ""
             }
           ]
         }

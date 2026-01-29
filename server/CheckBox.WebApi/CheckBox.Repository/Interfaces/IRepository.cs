@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Repository.Interfaces
 {
-    internal interface IRepository<T>
+    public interface IRepository<T>
     {
         Task<List<T>> GetAll();
         Task<T> GetById(int id);

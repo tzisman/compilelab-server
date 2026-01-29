@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckBox.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6affe444b0a85f627c4496a790d075ce21c6cb6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89fb9deddbb0e2513de1b94ae14f906325af25ab")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckBox.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckBox.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

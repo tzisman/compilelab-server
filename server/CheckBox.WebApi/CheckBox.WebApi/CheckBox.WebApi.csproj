@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
@@ -17,11 +17,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CheckBox.DataContext\CheckBox.DataContext.csproj" />
     <ProjectReference Include="..\CheckBox.Repository\CheckBox.Repository.csproj" />
+    <ProjectReference Include="..\CheckBox.Service\CheckBox.Service.csproj" />
   </ItemGroup>
 
 </Project>
