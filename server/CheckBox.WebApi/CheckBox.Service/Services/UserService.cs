@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Service.Services
 {
-    public class UserService(IRepository<User> repository, IMapper mapper) : IService<UserDto>
+    public class UserService(IUserRepository repository, IMapper mapper) : IService<UserDto>
     {
-        private readonly IRepository<User> _repository = repository;
+        private readonly IUserRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
         public Task<UserDto> AddItem(UserDto item)
         {

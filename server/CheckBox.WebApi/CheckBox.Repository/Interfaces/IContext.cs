@@ -10,6 +10,7 @@ namespace CheckBox.Repository.Interfaces
 {
     public interface IContext
     {
+        DbSet<T> Set<T>() where T : class;
         public DbSet<User> Users { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<UserInCourse> UserInCourses { get; set; }

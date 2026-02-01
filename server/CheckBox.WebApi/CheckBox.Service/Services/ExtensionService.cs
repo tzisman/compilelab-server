@@ -18,7 +18,10 @@ namespace CheckBox.Service.Services
             services.AddAutoMapper(typeof(MapperProfile));
             services.AddDataLayer(connectionString);
             services.AddRepository();
-            services.AddScoped<IRegister<UserRegisterDto>, UserRegister>();
+            services.AddScoped<IRegister<UserRegisterDto>, UserRegisterService>();
+            services.AddScoped<ILogin<UserLoginDto>, UserLoginService>();
+            services.AddScoped<IService<UserDto>, UserService>();
+            services.AddScoped<IService<CourseDto>, CourseService>();
             return services;
         }
     }

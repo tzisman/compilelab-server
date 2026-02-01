@@ -11,14 +11,15 @@ using AutoMapper;
 
 namespace CheckBox.Service.Services
 {
-    public class UserRegister(IRepository<User> repository, IMapper mapper) : IRegister<UserRegisterDto>
+    public class UserRegisterService(IUserRepository repository, IMapper mapper) : IRegister<UserRegisterDto>
     {
-        private readonly IRepository<User> _repository = repository;
+        private readonly IUserRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
 
         public async Task<string> Register(UserRegisterDto item)
         {
             User user = _mapper.Map<User>(item);
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(item.Password);
             _ = await _repository.AddItem(user);
             return "succses" ;
         }

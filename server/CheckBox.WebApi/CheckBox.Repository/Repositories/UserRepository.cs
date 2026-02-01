@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Repository.Repositories
 {
-    public class UserRepository(IContext context) : IRepository<User>
+    public class UserRepository(IContext context) : IUserRepository
     {
         private readonly IContext _ctx = context;
 
@@ -24,10 +24,10 @@ namespace CheckBox.Repository.Repositories
         {
             var user = _ctx.Users.FirstOrDefault(x => x.Id == id);
             if (user != null)
-            {
+            {         
                 _ctx.Users.Remove(user);
+                await _ctx.Save();
             }
-            await _ctx.Save();
         }
 
         public async Task<List<User>> GetAll()
@@ -38,22 +38,29 @@ namespace CheckBox.Repository.Repositories
         public async Task<User> GetById(int id)
         {
             var user = await _ctx.Users.FirstOrDefaultAsync(x => x.Id == id);
-            if (user != null)
+            if (user == null)
             {
-                return user;
+                return null; 
             }
-            return null;
+            return user;
         }
 
-        public async Task<User?> UpdateItem(int id, User item)
+        public async Task<User> GetUserByEmail(string email)
+        {
+            var user = await _ctx.Users.FirstOrDefaultAsync(x => x.Email == email);
+            return user;
+        }
+
+        public async Task<User> UpdateItem(int id, User item)
         {
             var user = await _ctx.Users.FirstOrDefaultAsync(x => x.Id == id);
-            if (user != null)
+            if (user == null)
             {
-                user.Email = item.Email;
-                user.Name = item.Name;
-                await _ctx.Save();
+                return null;
             }
+            user.Email = item.Email;
+            user.Name = item.Name;
+            await _ctx.Save();
             return user;
         }
     }
