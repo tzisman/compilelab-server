@@ -15,7 +15,9 @@ namespace CheckBox.Service.Services
         {
             CreateMap<User, UserRegisterDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<User, UserLoginDto>().ReverseMap();
             CreateMap<Course, CourseDto>().ReverseMap();
+            CreateMap<UserInCourse, UserInCourseDto>().ReverseMap();
         }
     }
 }

@@ -21,12 +21,11 @@ namespace CheckBox.Repository.Repositories
         public async Task DeleteItem(int id)
         {
             var item = await _ctx.Set<T>().FindAsync(id);
-            if (item == null)
-            {
-                throw new KeyNotFoundException($"Course with ID {id} was not found.");
+            if (item != null)
+            {    
+                _ctx.Set<T>().Remove(item);
+                await _ctx.Save();
             }
-            _ctx.Set<T>().Remove(item);
-            await _ctx.Save();
         }
 
         public async Task<List<T>> GetAll()

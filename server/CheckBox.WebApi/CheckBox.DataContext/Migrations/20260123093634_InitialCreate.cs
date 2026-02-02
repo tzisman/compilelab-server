@@ -68,7 +68,7 @@ namespace CheckBox.DataContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UsersInCourses",
+                name: "UserInCourses",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -79,15 +79,15 @@ namespace CheckBox.DataContext.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UsersInCourses", x => x.Id);
+                    table.PrimaryKey("PK_UserInCourses", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UsersInCourses_Courses_CourseId",
+                        name: "FK_UserInCourses_Courses_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Courses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UsersInCourses_Users_UserId",
+                        name: "FK_UserInCourses_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -137,9 +137,9 @@ namespace CheckBox.DataContext.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_StudentAnswers_UsersInCourses_UserInCourseId",
+                        name: "FK_StudentAnswers_UserInCourses_UserInCourseId",
                         column: x => x.UserInCourseId,
-                        principalTable: "UsersInCourses",
+                        principalTable: "UserInCourses",
                         principalColumn: "Id");
                 });
 
@@ -175,13 +175,13 @@ namespace CheckBox.DataContext.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersInCourses_CourseId",
-                table: "UsersInCourses",
+                name: "IX_UserInCourses_CourseId",
+                table: "UserInCourses",
                 column: "CourseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UsersInCourses_UserId_CourseId",
-                table: "UsersInCourses",
+                name: "IX_UserInCourses_UserId_CourseId",
+                table: "UserInCourses",
                 columns: new[] { "UserId", "CourseId" },
                 unique: true);
         }
@@ -196,7 +196,7 @@ namespace CheckBox.DataContext.Migrations
                 name: "TestCases");
 
             migrationBuilder.DropTable(
-                name: "UsersInCourses");
+                name: "UserInCourses");
 
             migrationBuilder.DropTable(
                 name: "CodeExercises");

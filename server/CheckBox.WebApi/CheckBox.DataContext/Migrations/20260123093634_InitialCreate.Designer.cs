@@ -188,7 +188,7 @@ namespace CheckBox.DataContext.Migrations
                     b.HasIndex("UserId", "CourseId")
                         .IsUnique();
 
-                    b.ToTable("UsersInCourses");
+                    b.ToTable("UserInCourses");
                 });
 
             modelBuilder.Entity("CheckBox.Repository.Entities.CodeExercise", b =>
