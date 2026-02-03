@@ -40,9 +40,13 @@ namespace CheckBox.Repository.Repositories
 
         public async Task<T> UpdateItem(int id, T item)
         {
-            _ctx.Set<T>().Update(item);
+            var existing = await _ctx.Set<T>().FindAsync(id);
+            if (existing == null)
+                return null;
+
+            _ctx.Entry(existing).CurrentValues.SetValues(item);
             await _ctx.Save();
-            return item;
+            return existing;
         }
     }
 }

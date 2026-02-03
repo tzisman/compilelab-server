@@ -1,4 +1,3 @@
-
 using CheckBox.DataContext;
 using CheckBox.Repository.Interfaces;
 using CheckBox.Service.Services;
@@ -19,7 +18,11 @@ namespace CheckBox.WebApi
             builder.Services.AddDbContext<CheckBoxContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+            .AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+            });
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

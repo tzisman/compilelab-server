@@ -1,5 +1,104 @@
 [
   {
+    "ContainingType": "CheckBox.WebApi.Controllers.CodeExerciseController",
+    "Method": "AddItem",
+    "RelativePath": "api/CodeExercise",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codeExerciseDto",
+        "Type": "CheckBox.Service.Dto.CodeExerciseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.CodeExerciseController",
+    "Method": "GetALl",
+    "RelativePath": "api/CodeExercise",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.CodeExerciseController",
+    "Method": "Get",
+    "RelativePath": "api/CodeExercise/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.CodeExerciseController",
+    "Method": "Delete",
+    "RelativePath": "api/CodeExercise/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.CodeExerciseController",
+    "Method": "Post",
+    "RelativePath": "api/CodeExercise/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExerciseName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Language",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CheckBox.WebApi.Controllers.CourseController",
     "Method": "AddItem",
     "RelativePath": "api/Course",

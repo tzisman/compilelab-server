@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckBox.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9ebdd7d0520a88c19f3c57a967f73f220b91d78")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9de94013aed1b7a38f06d8e1afcce0cc869905bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckBox.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckBox.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
