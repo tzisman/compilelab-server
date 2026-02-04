@@ -18,6 +18,7 @@ namespace CheckBox.Repository.Repositories
             services.AddScoped<IRepository<Course>, ItemRepository<Course>>();
             services.AddScoped<IRepository<UserInCourse>, ItemRepository<UserInCourse>>();
             services.AddScoped<IRepository<CodeExercise>, ItemRepository<CodeExercise>>();
+            services.AddScoped<IRepository<TestCase>, ItemRepository<TestCase>>();
             return services;
         }
     }

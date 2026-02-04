@@ -188,6 +188,100 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
+    "Method": "AddItem",
+    "RelativePath": "api/TestCase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "testCaseDto",
+        "Type": "CheckBox.Service.Dto.TestCaseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
+    "Method": "GetALl",
+    "RelativePath": "api/TestCase",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
+    "Method": "Get",
+    "RelativePath": "api/TestCase/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
+    "Method": "Delete",
+    "RelativePath": "api/TestCase/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
+    "Method": "Put",
+    "RelativePath": "api/TestCase/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExerciseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Input",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Output",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CheckBox.WebApi.Controllers.UserController",
     "Method": "GetALl",
     "RelativePath": "api/User",
