@@ -188,6 +188,110 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CheckBox.WebApi.Controllers.StudentAnswerController",
+    "Method": "AddItem",
+    "RelativePath": "api/StudentAnswer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "studentAnswerDto",
+        "Type": "CheckBox.Service.Dto.StudentAnswerDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.StudentAnswerController",
+    "Method": "GetALl",
+    "RelativePath": "api/StudentAnswer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.StudentAnswerController",
+    "Method": "Get",
+    "RelativePath": "api/StudentAnswer/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.StudentAnswerController",
+    "Method": "Delete",
+    "RelativePath": "api/StudentAnswer/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CheckBox.WebApi.Controllers.StudentAnswerController",
+    "Method": "Post",
+    "RelativePath": "api/StudentAnswer/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserInCourseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ExerciseId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnswerCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Mark",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Remark",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CheckBox.WebApi.Controllers.TestCaseController",
     "Method": "AddItem",
     "RelativePath": "api/TestCase",

@@ -306,6 +306,170 @@
         }
       }
     },
+    "/api/StudentAnswer": {
+      "post": {
+        "tags": [
+          "StudentAnswer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentAnswerDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentAnswerDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentAnswerDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "StudentAnswer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/StudentAnswer/{id}": {
+      "get": {
+        "tags": [
+          "StudentAnswer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "StudentAnswer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "StudentAnswer"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ExerciseId",
+                  "Id",
+                  "UserInCourseId"
+                ],
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "UserInCourseId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ExerciseId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "AnswerCode": {
+                    "type": "string"
+                  },
+                  "Mark": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Remark": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "UserInCourseId": {
+                  "style": "form"
+                },
+                "ExerciseId": {
+                  "style": "form"
+                },
+                "AnswerCode": {
+                  "style": "form"
+                },
+                "Mark": {
+                  "style": "form"
+                },
+                "Remark": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TestCase": {
       "post": {
         "tags": [
@@ -894,6 +1058,41 @@
           "Python"
         ],
         "type": "string"
+      },
+      "StudentAnswerDto": {
+        "required": [
+          "exerciseId",
+          "id",
+          "userInCourseId"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userInCourseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "exerciseId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "answerCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "mark": {
+            "type": "number",
+            "format": "double"
+          },
+          "remark": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
       },
       "TestCaseDto": {
         "required": [

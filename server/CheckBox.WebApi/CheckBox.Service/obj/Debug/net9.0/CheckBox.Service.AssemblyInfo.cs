@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CheckBox.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d024d3a509fe19785fe933bbd29aa634ea245321")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74326fff6b6923e9b3e0b22ec2ee51bff4a26c06")]
 [assembly: System.Reflection.AssemblyProductAttribute("CheckBox.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CheckBox.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

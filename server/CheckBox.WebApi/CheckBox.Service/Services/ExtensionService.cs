@@ -25,6 +25,7 @@ namespace CheckBox.Service.Services
             services.AddScoped<IService<UserInCourseDto>, UserInCourseService>();
             services.AddScoped<IService<CodeExerciseDto>, CodeExerciseService>();
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
+            services.AddScoped<IService<StudentAnswerDto>, StudentAnswerService>();
             return services;
         }
     }
