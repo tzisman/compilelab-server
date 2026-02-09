@@ -6,7 +6,7 @@ namespace CheckBox.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CodeExerciseController(IService<CodeExerciseDto> service) : Controller
+    public class CodeExerciseController(IService<CodeExerciseDto> service) : ControllerBase
     {
         private readonly IService<CodeExerciseDto> _service = service;
 
@@ -18,7 +18,7 @@ namespace CheckBox.WebApi.Controllers
                 var result = await _service.AddItem(codeExerciseDto);
                 if (result == null)
                 {
-                    return NotFound();
+                    return BadRequest("Could not create the item.");
                 }
                 return Ok(result);
             }
@@ -76,7 +76,7 @@ namespace CheckBox.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Post([FromForm] CodeExerciseDto codeExerciseDto, int id)
+        public async Task<IActionResult> Update([FromBody] CodeExerciseDto codeExerciseDto, int id)
         {
             try
             {

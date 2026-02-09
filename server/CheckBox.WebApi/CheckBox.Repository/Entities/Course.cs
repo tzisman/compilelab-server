@@ -16,8 +16,8 @@ namespace CheckBox.Repository.Entities
         [Required]
         public string Name { get; set; } = string.Empty;
 
-        public User? Lecturer { get; set; }
-        //public User Lecturer { get; set; } = null!;
+        
+        public User Lecturer { get; set; } = null!;
 
         [ForeignKey("Lecturer")]
         [Required]

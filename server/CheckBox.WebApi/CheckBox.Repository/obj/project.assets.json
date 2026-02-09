@@ -4716,11 +4716,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
+      "projectUniqueName": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
       "projectName": "CheckBox.Repository",
-      "projectPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
+      "projectPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\obj\\",
+      "outputPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

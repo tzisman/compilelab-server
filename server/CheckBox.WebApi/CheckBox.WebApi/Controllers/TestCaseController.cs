@@ -6,7 +6,7 @@ namespace CheckBox.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TestCaseController(IService<TestCaseDto> service) : Controller
+    public class TestCaseController(IService<TestCaseDto> service) : ControllerBase
     {
         private readonly IService<TestCaseDto> _service = service;
         [HttpPost]
@@ -75,7 +75,7 @@ namespace CheckBox.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put([FromForm] TestCaseDto testCaseDto, int id)
+        public async Task<IActionResult> Update([FromBody] TestCaseDto testCaseDto, int id)
         {
             try
             {

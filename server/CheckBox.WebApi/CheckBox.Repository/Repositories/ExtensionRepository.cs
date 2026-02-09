@@ -14,12 +14,11 @@ namespace CheckBox.Repository.Repositories
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
-            //services.AddScoped<IRepository<Course>, CourseRepository>();
-            services.AddScoped<IRepository<Course>, ItemRepository<Course>>();
-            services.AddScoped<IRepository<UserInCourse>, ItemRepository<UserInCourse>>();
-            services.AddScoped<IRepository<CodeExercise>, ItemRepository<CodeExercise>>();
-            services.AddScoped<IRepository<TestCase>, ItemRepository<TestCase>>();
-            services.AddScoped<IRepository<StudentAnswer>, ItemRepository<StudentAnswer>>();
+            services.AddScoped<IRepository<Course>, CourseRepository>();
+            services.AddScoped<IRepository<UserInCourse>, UserInCourseRepository>();
+            services.AddScoped<IRepository<CodeExercise>, CodeExerciseRepository>();
+            services.AddScoped<IRepository<TestCase>, TestCaseRepository>();
+            services.AddScoped<IRepository<StudentAnswer>, StudentAnswerRepository>();
             return services;
         }
     }

@@ -18,7 +18,13 @@ namespace CheckBox.Service.Services
 
         public async Task<string> Register(UserRegisterDto item)
         {
-            User user = _mapper.Map<User>(item);
+            var email = await _repository.GetUserByEmail(item.Email);
+            if (email != null)
+            {
+                throw new InvalidOperationException("The email already exists.");
+            }
+
+                User user = _mapper.Map<User>(item);
             user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(item.Password);
             _ = await _repository.AddItem(user);
             return "succses" ;

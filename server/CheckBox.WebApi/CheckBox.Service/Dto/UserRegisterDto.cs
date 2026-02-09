@@ -15,7 +15,10 @@ namespace CheckBox.Service.Dto
         [Required, EmailAddress]
         public string Email { get; set; } = string.Empty;
 
-        [Required, MinLength(6), RegularExpression(@"^(?=.*[0-9])(?=.*[a-zA-Z]).{6,20}$")]
+        [Required(ErrorMessage = "Password is required")]
+        [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
+        [RegularExpression(@"^(?=.*[0-9])(?=.*[a-zA-Z]).{6,20}$",
+        ErrorMessage = "Invalid password.")]
         public string Password { get; set; } = string.Empty;
 
     }

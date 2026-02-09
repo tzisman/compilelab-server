@@ -25,6 +25,10 @@ namespace CheckBox.WebApi.Controllers
                 var result = await _registerService.Register(user);
                 return Ok(result);
             }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
+            }
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
@@ -97,7 +101,7 @@ namespace CheckBox.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put([FromForm] UserDto user, int id)
+        public async Task<IActionResult> Update([FromBody] UserDto user, int id)
         {
             try
             {
@@ -107,6 +111,10 @@ namespace CheckBox.WebApi.Controllers
                     return NotFound();
                 }
                 return Ok(newUser);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return Conflict(new { message = ex.Message });
             }
             catch (Exception ex)
             {

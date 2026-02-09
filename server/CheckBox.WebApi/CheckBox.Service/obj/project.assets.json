@@ -2896,11 +2896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj",
+      "projectUniqueName": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj",
       "projectName": "CheckBox.Service",
-      "projectPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj",
+      "projectPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Service\\CheckBox.Service.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Service\\obj\\",
+      "outputPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2922,11 +2922,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj": {
-              "projectPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj"
+            "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj": {
+              "projectPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj"
             },
-            "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj": {
-              "projectPath": "D:\\programming\\פרויקט\\CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj"
+            "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj": {
+              "projectPath": "D:\\programming\\פרויקט\\‏‏CheckBox-OnlineJudge - עותק\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj"
             }
           }
         }

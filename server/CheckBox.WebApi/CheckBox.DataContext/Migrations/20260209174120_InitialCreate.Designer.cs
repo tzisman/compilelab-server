@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CheckBox.DataContext.Migrations
 {
     [DbContext(typeof(CheckBoxContext))]
-    [Migration("20260202170105_NewSetup")]
-    partial class NewSetup
+    [Migration("20260209174120_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

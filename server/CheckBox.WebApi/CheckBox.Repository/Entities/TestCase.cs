@@ -13,7 +13,7 @@ namespace CheckBox.Repository.Entities
         [Key]
         public int Id { get; set; }
 
-        public CodeExercise? Exercise { get; set; }
+        public CodeExercise Exercise { get; set; } = null!;
 
         [ForeignKey("Exercise")]
         [Required]

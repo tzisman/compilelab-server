@@ -169,12 +169,6 @@ namespace CheckBox.DataContext.Migrations
                 column: "ExerciseId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Users_Email",
-                table: "Users",
-                column: "Email",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_UserInCourses_CourseId",
                 table: "UserInCourses",
                 column: "CourseId");
@@ -183,6 +177,12 @@ namespace CheckBox.DataContext.Migrations
                 name: "IX_UserInCourses_UserId_CourseId",
                 table: "UserInCourses",
                 columns: new[] { "UserId", "CourseId" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email",
                 unique: true);
         }
 

@@ -19,14 +19,14 @@ namespace CheckBox.Repository.Entities
             [Key]
             public int Id { get; set; }
 
-            public User? Student { get; set; }
+        public User? Student { get; set; } = null!;
 
             [ForeignKey("Student")]
             [Required]
             public int UserId { get; set; }
 
 
-            public Course? Course { get; set; }
+            public Course Course { get; set; } = null!;
 
             [ForeignKey("Course")]
             [Required]

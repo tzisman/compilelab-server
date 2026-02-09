@@ -106,51 +106,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "CourseId",
-                  "ExerciseName",
-                  "Id",
-                  "Language"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "CourseId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "ExerciseName": {
-                    "type": "string"
-                  },
-                  "Language": {
-                    "$ref": "#/components/schemas/ProgrammingLanguage"
-                  },
-                  "Description": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "CourseId": {
-                  "style": "form"
-                },
-                "ExerciseName": {
-                  "style": "form"
-                },
-                "Language": {
-                  "style": "form"
-                },
-                "Description": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/CodeExerciseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeExerciseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeExerciseDto"
               }
             }
           }
@@ -263,38 +231,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "Id",
-                  "LecturerId",
-                  "Name"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Name": {
-                    "type": "string"
-                  },
-                  "LecturerId": {
-                    "type": "integer",
-                    "format": "int32"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "Name": {
-                  "style": "form"
-                },
-                "LecturerId": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/CourseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseDto"
               }
             }
           }
@@ -407,58 +356,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "ExerciseId",
-                  "Id",
-                  "UserInCourseId"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "UserInCourseId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "ExerciseId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "AnswerCode": {
-                    "type": "string"
-                  },
-                  "Mark": {
-                    "type": "number",
-                    "format": "double"
-                  },
-                  "Remark": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "UserInCourseId": {
-                  "style": "form"
-                },
-                "ExerciseId": {
-                  "style": "form"
-                },
-                "AnswerCode": {
-                  "style": "form"
-                },
-                "Mark": {
-                  "style": "form"
-                },
-                "Remark": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/StudentAnswerDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentAnswerDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudentAnswerDto"
               }
             }
           }
@@ -571,45 +481,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "ExerciseId",
-                  "Id",
-                  "Input",
-                  "Output"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "ExerciseId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Input": {
-                    "type": "string"
-                  },
-                  "Output": {
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "ExerciseId": {
-                  "style": "form"
-                },
-                "Input": {
-                  "style": "form"
-                },
-                "Output": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/TestCaseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestCaseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TestCaseDto"
               }
             }
           }
@@ -768,38 +652,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "Email",
-                  "Id",
-                  "Name"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "Name": {
-                    "type": "string"
-                  },
-                  "Email": {
-                    "type": "string",
-                    "format": "email"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "Name": {
-                  "style": "form"
-                },
-                "Email": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/UserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserDto"
               }
             }
           }
@@ -912,39 +777,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "CourseId",
-                  "Id",
-                  "UserId"
-                ],
-                "type": "object",
-                "properties": {
-                  "Id": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "UserId": {
-                    "type": "integer",
-                    "format": "int32"
-                  },
-                  "CourseId": {
-                    "type": "integer",
-                    "format": "int32"
-                  }
-                }
-              },
-              "encoding": {
-                "Id": {
-                  "style": "form"
-                },
-                "UserId": {
-                  "style": "form"
-                },
-                "CourseId": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/UserInCourseDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInCourseDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserInCourseDto"
               }
             }
           }
@@ -1118,6 +963,30 @@
           "output": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserDto": {
+        "required": [
+          "email",
+          "id",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
           }
         },
         "additionalProperties": false
