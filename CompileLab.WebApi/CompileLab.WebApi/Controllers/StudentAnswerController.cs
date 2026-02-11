@@ -13,19 +13,9 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost]
     public async Task<IActionResult> AddItem([FromBody] StudentAnswerDto studentAnswerDto)
     {
-        try
-        {
+
             var result = await _service.AddItem(studentAnswerDto);
-            if (result == null)
-            {
-                return NotFound();
-            }
             return Ok(result);
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
     }
 
     [HttpGet]
@@ -77,19 +67,14 @@ namespace CompileLab.WebApi.Controllers
     [HttpPut("{id}")]
     public async Task<IActionResult> Update([FromBody] StudentAnswerDto studentAnswer, int id)
     {
-        try
-        {
+
             var newStudentAnswer = await _service.UpdateItem(id, studentAnswer);
             if (newStudentAnswer == null)
             {
                 return NotFound();
             }
             return Ok(newStudentAnswer);
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+       
     }
     }
 

@@ -77,13 +77,11 @@ namespace CompileLab.WebApi
             });
 
             builder.Services.AddServices(connectionString);
-
+            builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+            builder.Services.AddProblemDetails();
             var app = builder.Build();
 
-            app.UseExceptionHandler(appBuilder =>
-            {
-                appBuilder.UseMiddleware<ExceptionHandlingMiddleware>();
-            });
+            app.UseExceptionHandler();
 
             if (app.Environment.IsDevelopment())
             {
