@@ -29,6 +29,8 @@ namespace CompileLab.Service.Services
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
             services.AddScoped<IService<StudentAnswerDto>, StudentAnswerService>();
             services.AddKeyedScoped<IAuthorization, CourseAuthorization>("course");
+            services.AddKeyedScoped<IAuthorization, ExerciseAuthorization>("exercise");
+            services.AddKeyedScoped<IAuthorization, TestCaseAuthorization>("testCase");
             services.AddScoped<IToken<User>, TokenService>();
             return services;
         }
