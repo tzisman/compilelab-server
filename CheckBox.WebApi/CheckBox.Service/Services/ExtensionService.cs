@@ -1,6 +1,7 @@
-﻿using CheckBox.Repository.Repositories;
+﻿using CheckBox.DataContext;
+using CheckBox.Repository.Entities;
+using CheckBox.Repository.Repositories;
 using CheckBox.Service.Dto;
-using CheckBox.DataContext;
 using CheckBox.Service.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -26,6 +27,7 @@ namespace CheckBox.Service.Services
             services.AddScoped<IService<CodeExerciseDto>, CodeExerciseService>();
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
             services.AddScoped<IService<StudentAnswerDto>, StudentAnswerService>();
+            services.AddScoped<IToken<User>, TokenService>();
             return services;
         }
     }

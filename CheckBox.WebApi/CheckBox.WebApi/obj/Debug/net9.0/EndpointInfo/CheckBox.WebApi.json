@@ -543,32 +543,19 @@
         ],
         "requestBody": {
           "content": {
-            "multipart/form-data": {
+            "application/json": {
               "schema": {
-                "required": [
-                  "Email",
-                  "Password"
-                ],
-                "type": "object",
-                "properties": {
-                  "Email": {
-                    "type": "string",
-                    "format": "email"
-                  },
-                  "Password": {
-                    "minLength": 6,
-                    "pattern": "^(?=.*[0-9])(?=.*[a-zA-Z]).{6,20}$",
-                    "type": "string"
-                  }
-                }
-              },
-              "encoding": {
-                "Email": {
-                  "style": "form"
-                },
-                "Password": {
-                  "style": "form"
-                }
+                "$ref": "#/components/schemas/UserLoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLoginDto"
               }
             }
           }
@@ -1010,6 +997,26 @@
           "courseId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLoginDto": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "password": {
+            "minLength": 6,
+            "pattern": "^(?=.*[0-9])(?=.*[a-zA-Z]).{6,20}$",
+            "type": "string"
           }
         },
         "additionalProperties": false

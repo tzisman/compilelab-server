@@ -35,16 +35,16 @@ namespace CheckBox.WebApi.Controllers
             }
         }
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromForm] UserLoginDto user)
+        public async Task<IActionResult> Login([FromBody] UserLoginDto user)
         {
             try
             {
                 var result = await _loginService.Login(user);
-                if(result == "succes")
-                {
-                    return Ok(result);
-                }
-                return Unauthorized();
+                return Ok(result);
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                return Unauthorized(new { message = ex.Message });
             }
             catch (Exception ex)
             {

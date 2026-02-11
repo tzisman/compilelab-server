@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Service.Services
 {
-    public class UserLoginService(IUserRepository repository, IMapper mapper) : ILogin<UserLoginDto>
+    public class UserLoginService(IUserRepository repository, IMapper mapper, IToken<User> token) : ILogin<UserLoginDto>
     {
         private readonly IUserRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
+        private readonly IToken<User> _tokenService = token;
         public async Task<string> Login(UserLoginDto item)
         {
             var user = await _repository.GetUserByEmail(item.Email);
@@ -23,11 +24,13 @@ namespace CheckBox.Service.Services
                 bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(item.Password, user.PasswordHash);
                 if (isPasswordCorrect)
                 {
-                    return "succes";
+                    var jwt = _tokenService.CreateToken(user);
+                    return jwt;
                 }
             }
-            return "flail";
-             
+            throw new UnauthorizedAccessException("email or passwors is incorrect");
+
         }
     }
 }
+

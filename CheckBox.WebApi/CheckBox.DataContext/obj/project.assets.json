@@ -4736,11 +4736,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj",
+      "projectUniqueName": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj",
       "projectName": "CheckBox.DataContext",
-      "projectPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj",
+      "projectPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\CheckBox.WebApi\\CheckBox.DataContext\\CheckBox.DataContext.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.DataContext\\obj\\",
+      "outputPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\CheckBox.WebApi\\CheckBox.DataContext\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4762,8 +4762,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj": {
-              "projectPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\server\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj"
+            "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj": {
+              "projectPath": "D:\\programming\\project\\‏‏CheckBox-OnlineJudge\\CheckBox.WebApi\\CheckBox.Repository\\CheckBox.Repository.csproj"
             }
           }
         }

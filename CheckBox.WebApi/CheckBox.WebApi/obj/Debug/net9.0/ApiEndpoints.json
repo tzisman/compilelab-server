@@ -387,14 +387,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "user",
+        "Type": "CheckBox.Service.Dto.UserLoginDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
