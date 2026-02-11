@@ -2,6 +2,8 @@
 using CheckBox.Repository.Interfaces;
 using CheckBox.Service.Dto;
 using CheckBox.Service.Interfaces;
+using CheckBox.Service.Services;
+using CheckBox.WebApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,12 +20,17 @@ namespace CheckBox.WebApi.Controllers
         {
             try
             {
-                var result = await _service.AddItem(courseDto);
-                if (result == null)
+                var userId = User.GetUserId();
+                if(userId == null)
                 {
-                    return NotFound();
+                    return Unauthorized("You are not logged in.");
                 }
+                var result = await _service.AddItem(courseDto, userId.Value);
                 return Ok(result);
+            }
+            catch (ForbiddenAccessException)
+            {
+                return Forbid();
             }
             catch (Exception ex)
             {
@@ -67,10 +74,23 @@ namespace CheckBox.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            var userId = User.GetUserId();
+            if (userId == null)
+            {
+                return Unauthorized("You are not logged in.");
+            }
             try
             {
-                await _service.DeleteItem(id);
+                await _service.DeleteItem(id, userId.Value);
                 return NoContent();  
+            }
+            catch (ForbiddenAccessException)
+            {
+                return Forbid();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound();
             }
             catch (Exception ex)
             {
@@ -81,14 +101,23 @@ namespace CheckBox.WebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody]  CourseDto courseDto, int id)
         {
+            var userId = User.GetUserId();
+            if (userId == null)
+            {
+                return Unauthorized("You are not logged in.");
+            }
             try
             {
-                var newCourse = await _service.UpdateItem(id, courseDto);
+                var newCourse = await _service.UpdateItem(id, courseDto, userId.Value);
                 if (newCourse == null)
                 {
                     return NotFound();
                 }
                 return Ok(newCourse);   
+            }
+            catch (ForbiddenAccessException)
+            {
+                return Forbid();
             }
             catch (Exception ex)
             {

@@ -3,6 +3,7 @@ using CheckBox.Repository.Entities;
 using CheckBox.Repository.Interfaces;
 using CheckBox.Service.Dto;
 using CheckBox.Service.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,13 @@ using System.Threading.Tasks;
 
 namespace CheckBox.Service.Services
 {
-    public class CourseService(IRepository<Course> repository, IMapper mapper) : IService<CourseDto>
+    public class CourseService(IRepository<Course> repository, IMapper mapper,
+        [FromKeyedServices("course")] IAuthorization courseAuth
+        ) : IService<CourseDto>
     {
         private readonly IRepository<Course> _repository = repository;
         private readonly IMapper _mapper = mapper;
+        IAuthorization _courseAuth = courseAuth;
         public async Task<CourseDto> AddItem(CourseDto item)
         {
             var course = _mapper.Map<Course>(item);
@@ -23,8 +27,34 @@ namespace CheckBox.Service.Services
             return newCourse;
         }
 
+        public async Task<CourseDto> AddItem(CourseDto item, int userId)
+        {
+            if(item.LecturerId != userId)
+            {
+                throw new ForbiddenAccessException("User is not authorized to add a course.");
+            }
+            var course = _mapper.Map<Course>(item);
+            var result = await _repository.AddItem(course);
+            var newCourse = _mapper.Map<CourseDto>(result);
+            return newCourse;
+        }
+
         public async Task DeleteItem(int id)
         {
+            await _repository.DeleteItem(id);
+        }
+
+        public async Task DeleteItem(int id, int userId)
+        {
+            if (!await _courseAuth.IsOwnerOf(id, userId))
+            {
+                throw new ForbiddenAccessException("User is not authorized to delete a course.");
+            }
+            var item = await _repository.GetById(id);
+            if (item == null)
+            {
+                throw new KeyNotFoundException("Course not found.");
+            }
             await _repository.DeleteItem(id);
         }
 
@@ -44,6 +74,20 @@ namespace CheckBox.Service.Services
 
         public async Task<CourseDto> UpdateItem(int id, CourseDto item)
         {
+
+            var course = _mapper.Map<Course>(item);
+            var result = await _repository.UpdateItem(id, course);
+            var courseDto = _mapper.Map<CourseDto>(result);
+            return courseDto;
+        }
+
+        public async Task<CourseDto> UpdateItem(int id, CourseDto item, int userId)
+        {
+            if (!await _courseAuth.IsOwnerOf(id, userId) || item.LecturerId != userId)
+            {
+                throw new ForbiddenAccessException("User is not authorized to delete a course.");
+            }
+
             var course = _mapper.Map<Course>(item);
             var result = await _repository.UpdateItem(id, course);
             var courseDto = _mapper.Map<CourseDto>(result);

@@ -24,9 +24,19 @@ namespace CheckBox.Service.Services
             return newTestCase;
         }
 
+        public Task<TestCaseDto> AddItem(TestCaseDto item, int userId)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task DeleteItem(int id)
         {
             await _repository.DeleteItem(id);
+        }
+
+        public Task DeleteItem(int id, int userId)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<List<TestCaseDto>> GetAll()
@@ -49,6 +59,11 @@ namespace CheckBox.Service.Services
             var result = await _repository.UpdateItem(id, testCase);
             var resultDto = _mapper.Map<TestCaseDto>(result);
             return resultDto;
+        }
+
+        public Task<TestCaseDto> UpdateItem(int id, TestCaseDto item, int userId)
+        {
+            throw new NotImplementedException();
         }
     }
 }
