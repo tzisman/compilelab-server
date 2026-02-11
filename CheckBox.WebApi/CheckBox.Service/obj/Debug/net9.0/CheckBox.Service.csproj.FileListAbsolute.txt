@@ -1,0 +1,51 @@
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.deps.json
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.dll
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.dll
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.dll
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.pdb
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.pdb
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.AssemblyReference.cache
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfoInputs.cache
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfo.cs
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.CoreCompileInputs.cache
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.CD3EA2AA.Up2Date
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.dll
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\refint\CheckBox.Service.dll
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\פרויקט\CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\ref\CheckBox.Service.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.deps.json
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.pdb
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.pdb
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.AssemblyReference.cache
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfoInputs.cache
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfo.cs
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.CoreCompileInputs.cache
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.CD3EA2AA.Up2Date
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\refint\CheckBox.Service.dll
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\פרויקט\‏‏CheckBox-OnlineJudge - עותק\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\ref\CheckBox.Service.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.deps.json
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.DataContext.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\bin\Debug\net9.0\CheckBox.Repository.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.AssemblyReference.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfoInputs.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.AssemblyInfo.cs
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.csproj.CoreCompileInputs.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.CD3EA2AA.Up2Date
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\refint\CheckBox.Service.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\CheckBox.Service.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\server\CheckBox.WebApi\CheckBox.Service\obj\Debug\net9.0\ref\CheckBox.Service.dll
