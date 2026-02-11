@@ -15,6 +15,7 @@ namespace CompileLab.Repository.Repositories
 
         public async Task<UserInCourse> AddItem(UserInCourse item)
         {
+            item.Status = CourseStatus.Sent;
             await _ctx.UserInCourses.AddAsync(item);
             await _ctx.Save();
             return item;
@@ -54,22 +55,22 @@ namespace CompileLab.Repository.Repositories
             return userInCourse;
         }
 
-        public async Task<UserInCourse> UpdateItem(int id, UserInCourse item)
-        {
-            var existingItem = await _ctx.UserInCourses.FirstOrDefaultAsync(x => x.Id == id);
+        //public async Task<UserInCourse> UpdateItem(int id, UserInCourse item)
+        //{
+        //    var existingItem = await _ctx.UserInCourses.FirstOrDefaultAsync(x => x.Id == id);
 
-            if (existingItem == null)
-            {
-                return null; 
-            }    
-            existingItem.Status = item.Status;
-
-            existingItem.UserId = item.UserId;
-            existingItem.CourseId = item.CourseId;
+        //    if (existingItem == null)
+        //    {
+        //        return null; 
+        //    }    
             
-            await _ctx.Save();
 
-            return existingItem;
-        }
+        //    existingItem.UserId = item.UserId;
+        //    existingItem.CourseId = item.CourseId;
+            
+        //    await _ctx.Save();
+
+        //    return existingItem;
+        //}
     }
 }

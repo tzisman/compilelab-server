@@ -83,7 +83,7 @@ namespace CompileLab.Service.Services
         {
             if (!await _exerciseAuth.IsOwnerOf(id, userId) || !await _courseAuth.IsOwnerOf(item.CourseId, userId))
             {
-                throw new ForbiddenAccessException("User is not authorized to delete a course.");
+                throw new ForbiddenAccessException("User is not authorized to update a course.");
             }
             var codeExercise = _mapper.Map<CodeExercise>(item);
             var result = await _repository.UpdateItem(id, codeExercise);

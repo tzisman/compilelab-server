@@ -3,6 +3,7 @@ using CompileLab.Repository.Entities;
 using CompileLab.Repository.Interfaces;
 using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,13 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class UserInCourseService(IRepository<UserInCourse> repository, IMapper mapper) : IService<UserInCourseDto>
+    public class UserInCourseService(IRepository<UserInCourse> repository, IMapper mapper,
+        [FromKeyedServices("userInCourse")] IAuthorization uicAuth
+        ) : IService<UserInCourseDto>
     {
         private readonly IRepository<UserInCourse> _repository = repository;
         private readonly IMapper _mapper = mapper;
+        private readonly IAuthorization _uicAuth = uicAuth;
         public async Task<UserInCourseDto> AddItem(UserInCourseDto item)
         {
             var userInCourse = _mapper.Map<UserInCourse>(item);
@@ -23,9 +27,17 @@ namespace CompileLab.Service.Services
             return newCourse;
         }
 
-        public Task<UserInCourseDto> AddItem(UserInCourseDto item, int userId)
+        public async Task<UserInCourseDto> AddItem(UserInCourseDto item, int userId)
         {
-            throw new NotImplementedException();
+            if (item.UserId != userId)
+            {
+                throw new ForbiddenAccessException("User is not authorized to add a course.");
+            }
+
+            var userInCourse = _mapper.Map<UserInCourse>(item);
+            var result = await _repository.AddItem(userInCourse);
+            var newCourse = _mapper.Map<UserInCourseDto>(result);
+            return newCourse;
         }
 
         public async Task DeleteItem(int id)
@@ -33,9 +45,13 @@ namespace CompileLab.Service.Services
             await _repository.DeleteItem(id);
         }
 
-        public Task DeleteItem(int id, int userId)
+        public async Task DeleteItem(int id, int userId)
         {
-            throw new NotImplementedException();
+            if (!await _uicAuth.IsOwnerOf(id, userId))
+            {
+                throw new ForbiddenAccessException("User is not authorized to delete a userInCourse.");
+            }
+            await _repository.DeleteItem(id);
         }
 
         public async Task<List<UserInCourseDto>> GetAll()
@@ -60,9 +76,16 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
-        public Task<UserInCourseDto> UpdateItem(int id, UserInCourseDto item, int userId)
+        public async Task<UserInCourseDto> UpdateItem(int id, UserInCourseDto item, int userId)
         {
-            throw new NotImplementedException();
+            if (!await _uicAuth.IsOwnerOf(id, userId) || item.UserId != userId)
+            {
+                throw new ForbiddenAccessException("User is not authorized to update a course.");
+            }
+            var userInCourse = _mapper.Map<UserInCourse>(item);
+            var result = await _repository.UpdateItem(id, userInCourse);
+            var resultDto = _mapper.Map<UserInCourseDto>(result);
+            return resultDto;
         }
     }
 }

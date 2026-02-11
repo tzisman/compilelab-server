@@ -13,55 +13,36 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost]
     public async Task<IActionResult> AddItem([FromBody] StudentAnswerDto studentAnswerDto)
     {
-
-            var result = await _service.AddItem(studentAnswerDto);
-            return Ok(result);
+        var result = await _service.AddItem(studentAnswerDto);
+        return Ok(result);
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
-        try
-        {
-            var studentAnswers = await _service.GetAll();
-            return Ok(studentAnswers);
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+
+        var studentAnswers = await _service.GetAll();
+        return Ok(studentAnswers);
+
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(int id)
     {
-        try
+
+        var studentAnswer = await _service.GetById(id);
+        if (studentAnswer == null)
         {
-            var studentAnswer = await _service.GetById(id);
-            if (studentAnswer == null)
-            {
-                return NotFound();
-            }
-            return Ok(studentAnswer);
+            return NotFound();
         }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        return Ok(studentAnswer);
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
-        try
-        {
-            await _service.DeleteItem(id);
-            return NoContent();
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(ex.Message);
-        }
+        await _service.DeleteItem(id);
+        return NoContent();
     }
 
     [HttpPut("{id}")]

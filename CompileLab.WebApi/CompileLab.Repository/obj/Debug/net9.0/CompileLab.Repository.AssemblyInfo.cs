@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompileLab.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+707990f95b1a4eb8a5ef67868c6da00b7fb34ccd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbfc44384b8518b20646bb1e91b5a01d2cb36a50")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompileLab.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompileLab.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

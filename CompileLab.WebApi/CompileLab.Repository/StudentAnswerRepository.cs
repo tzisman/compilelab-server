@@ -15,6 +15,7 @@ namespace CompileLab.Repository
 
         public async Task<StudentAnswer> AddItem(StudentAnswer item)
         {
+            item.Mark = 0; 
             await _ctx.StudentAnswers.AddAsync(item);
             await _ctx.Save();
             return item;
@@ -65,7 +66,6 @@ namespace CompileLab.Repository
             if (existing == null) return null;
 
             existing.AnswerCode = item.AnswerCode;
-            existing.Mark = item.Mark;
             existing.Remark = item.Remark;
             existing.ExerciseId = item.ExerciseId;
             existing.UserInCourseId = item.UserInCourseId;

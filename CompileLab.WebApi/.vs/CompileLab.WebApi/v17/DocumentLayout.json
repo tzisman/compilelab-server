@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\controllers\\studentanswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\controllers\\studentanswercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.repository\\repositories\\userincourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|solutionrelative:compilelab.repository\\repositories\\userincourserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\authorization\\userincourseauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\authorization\\userincourseauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\controllers\\testcasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\controllers\\testcasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\courseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\testcaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\testcaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\userincourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\userincourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\extensionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\extensionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\studentanswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\studentanswerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\mapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\services\\codeexerciseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\services\\codeexerciseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.repository\\entities\\studentanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|solutionrelative:compilelab.repository\\entities\\studentanswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.webapi\\controllers\\codeexercisecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB73A0ED-5AD7-44FA-90B3-97186BE7C801}|CompileLab.WebApi\\CompileLab.WebApi.csproj|solutionrelative:compilelab.webapi\\controllers\\codeexercisecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.repository\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977271D2-B6CF-4F12-818A-32B2474EF177}|CompileLab.Repository\\CompileLab.Repository.csproj|solutionrelative:compilelab.repository\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|d:\\programming\\project\\\u200F\u200Fcheckbox-onlinejudge\\compilelab.webapi\\compilelab.service\\authorization\\courseauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53F171EC-3509-440B-940F-C0CBF89B92BC}|CompileLab.Service\\CompileLab.Service.csproj|solutionrelative:compilelab.service\\authorization\\courseauthorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,120 +50,131 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentAnswerController.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\StudentAnswerController.cs",
-              "RelativeDocumentMoniker": "CompileLab.WebApi\\Controllers\\StudentAnswerController.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\StudentAnswerController.cs",
-              "RelativeToolTip": "CompileLab.WebApi\\Controllers\\StudentAnswerController.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwEUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserInCourseAuthorization.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Authorization\\UserInCourseAuthorization.cs",
+              "RelativeDocumentMoniker": "CompileLab.Service\\Authorization\\UserInCourseAuthorization.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Authorization\\UserInCourseAuthorization.cs",
+              "RelativeToolTip": "CompileLab.Service\\Authorization\\UserInCourseAuthorization.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T19:50:41.871Z",
+              "WhenOpened": "2026-02-11T21:13:13.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "CompileLab.WebApi\\Program.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Program.cs",
-              "RelativeToolTip": "CompileLab.WebApi\\Program.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAYwGUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UserInCourseRepository.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Repositories\\UserInCourseRepository.cs",
+              "RelativeDocumentMoniker": "CompileLab.Repository\\Repositories\\UserInCourseRepository.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Repositories\\UserInCourseRepository.cs",
+              "RelativeToolTip": "CompileLab.Repository\\Repositories\\UserInCourseRepository.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEkAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T19:47:15.992Z",
+              "WhenOpened": "2026-02-11T21:12:13.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "GlobalExceptionHandler.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\GlobalExceptionHandler.cs",
-              "RelativeDocumentMoniker": "CompileLab.WebApi\\GlobalExceptionHandler.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\GlobalExceptionHandler.cs",
-              "RelativeToolTip": "CompileLab.WebApi\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T19:37:25.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "CompileLab.WebApi\\Controllers\\CourseController.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "CompileLab.WebApi\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAowB4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T19:06:04.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TestCaseController.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\TestCaseController.cs",
-              "RelativeDocumentMoniker": "CompileLab.WebApi\\Controllers\\TestCaseController.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\TestCaseController.cs",
-              "RelativeToolTip": "CompileLab.WebApi\\Controllers\\TestCaseController.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T18:59:43.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TestCaseService.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\TestCaseService.cs",
-              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\TestCaseService.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\TestCaseService.cs",
-              "RelativeToolTip": "CompileLab.Service\\Services\\TestCaseService.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAAwFoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T18:59:26.728Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourseService.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\CourseService.cs",
-              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\CourseService.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\CourseService.cs",
-              "RelativeToolTip": "CompileLab.Service\\Services\\CourseService.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwDMAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T18:02:16.871Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StudentAnswerService.cs",
-              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\StudentAnswerService.cs",
-              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\StudentAnswerService.cs",
-              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\StudentAnswerService.cs",
-              "RelativeToolTip": "CompileLab.Service\\Services\\StudentAnswerService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T18:59:16.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "ExtensionService.cs",
               "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\ExtensionService.cs",
               "RelativeDocumentMoniker": "CompileLab.Service\\Services\\ExtensionService.cs",
               "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\ExtensionService.cs",
               "RelativeToolTip": "CompileLab.Service\\Services\\ExtensionService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCEAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-11T18:18:17.91Z"
+              "WhenOpened": "2026-02-11T21:05:21.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CodeExerciseController.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\CodeExerciseController.cs",
+              "RelativeDocumentMoniker": "CompileLab.WebApi\\Controllers\\CodeExerciseController.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.WebApi\\Controllers\\CodeExerciseController.cs",
+              "RelativeToolTip": "CompileLab.WebApi\\Controllers\\CodeExerciseController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:56:30.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserInCourseService.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\UserInCourseService.cs",
+              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\UserInCourseService.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\UserInCourseService.cs",
+              "RelativeToolTip": "CompileLab.Service\\Services\\UserInCourseService.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAlwDYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:55:39.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapperProfile.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\MapperProfile.cs",
+              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\MapperProfile.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\MapperProfile.cs",
+              "RelativeToolTip": "CompileLab.Service\\Services\\MapperProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T21:15:03.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CodeExerciseService.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\CodeExerciseService.cs",
+              "RelativeDocumentMoniker": "CompileLab.Service\\Services\\CodeExerciseService.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Services\\CodeExerciseService.cs",
+              "RelativeToolTip": "CompileLab.Service\\Services\\CodeExerciseService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwFMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:54:24.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentAnswer.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Entities\\StudentAnswer.cs",
+              "RelativeDocumentMoniker": "CompileLab.Repository\\Entities\\StudentAnswer.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Entities\\StudentAnswer.cs",
+              "RelativeToolTip": "CompileLab.Repository\\Entities\\StudentAnswer.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:42:49.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "CompileLab.Repository\\Entities\\Course.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Repository\\Entities\\Course.cs",
+              "RelativeToolTip": "CompileLab.Repository\\Entities\\Course.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:39:49.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CourseAuthorization.cs",
+              "DocumentMoniker": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Authorization\\CourseAuthorization.cs",
+              "RelativeDocumentMoniker": "CompileLab.Service\\Authorization\\CourseAuthorization.cs",
+              "ToolTip": "D:\\programming\\project\\\u200F\u200FCheckBox-OnlineJudge\\CompileLab.WebApi\\CompileLab.Service\\Authorization\\CourseAuthorization.cs",
+              "RelativeToolTip": "CompileLab.Service\\Authorization\\CourseAuthorization.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T20:33:18.606Z"
             }
           ]
         }

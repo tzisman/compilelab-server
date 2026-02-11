@@ -1,5 +1,6 @@
 using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
+using CompileLab.WebApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompileLab.WebApi.Controllers
@@ -13,19 +14,17 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] UserInCourseDto userInCourseDto)
         {
-            try
+            var userId = User.GetUserId();
+            if (userId == null)
             {
-                var result = await _service.AddItem(userInCourseDto);
-                if (result == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result);
+                return Unauthorized("You are not logged in.");
             }
-            catch (Exception ex)
+            var result = await _service.AddItem(userInCourseDto, userId.Value);
+            if (result == null)
             {
-                return BadRequest(ex.Message);
+                return NotFound();
             }
+            return Ok(result);
         }
 
         [HttpGet]
@@ -46,51 +45,40 @@ namespace CompileLab.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            try
-            {
-                var userInCourse = await _service.GetById(id);
-                if (userInCourse == null)
-                {
-                    return NotFound();
-                }
-                return Ok(userInCourse);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+             var userInCourse = await _service.GetById(id);
+             if (userInCourse == null)
+             {
+                 return NotFound();
+             }
+             return Ok(userInCourse);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            try
+            var userId = User.GetUserId();
+            if (userId == null)
             {
-                await _service.DeleteItem(id);
-                return NoContent();
+                return Unauthorized("You are not logged in.");
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _service.DeleteItem(id, userId.Value);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] UserInCourseDto userInCourseDto, int id)
         {
-            try
+            var userId = User.GetUserId();
+            if (userId == null)
             {
-                var result= await _service.UpdateItem(id, userInCourseDto);
-                if (result == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result);
+                return Unauthorized("You are not logged in.");
             }
-            catch (Exception ex)
+            var result= await _service.UpdateItem(id, userInCourseDto, userId.Value);
+            if (result == null)
             {
-                return BadRequest(ex.Message);
+                return NotFound();
             }
+            return Ok(result);
         }
     }
 }

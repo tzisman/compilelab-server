@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompileLab.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb4d42473d3c78e440c6bf8ce2c8b895be441e68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbfc44384b8518b20646bb1e91b5a01d2cb36a50")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompileLab.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompileLab.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
