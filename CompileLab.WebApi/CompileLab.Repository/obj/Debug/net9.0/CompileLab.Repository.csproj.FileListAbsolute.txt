@@ -1,0 +1,14 @@
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\bin\Debug\net9.0\CompileLab.Repository.deps.json
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\bin\Debug\net9.0\CompileLab.Repository.runtimeconfig.json
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\bin\Debug\net9.0\CompileLab.Repository.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\bin\Debug\net9.0\CompileLab.Repository.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.csproj.AssemblyReference.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.AssemblyInfoInputs.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.AssemblyInfo.cs
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.csproj.CoreCompileInputs.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\refint\CompileLab.Repository.dll
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.pdb
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\CompileLab.Repository.genruntimeconfig.cache
+D:\programming\project\‏‏CheckBox-OnlineJudge\CompileLab.WebApi\CompileLab.Repository\obj\Debug\net9.0\ref\CompileLab.Repository.dll
