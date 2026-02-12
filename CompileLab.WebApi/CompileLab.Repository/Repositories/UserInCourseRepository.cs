@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Repository.Repositories
 {
-    public class UserInCourseRepository(IContext context) : IRepository<UserInCourse>
+    public class UserInCourseRepository(IContext context) : IUserInCourseRepository
     {
         private readonly IContext _ctx = context;
 
         public async Task<UserInCourse> AddItem(UserInCourse item)
         {
             item.Status = CourseStatus.Sent;
+            //item.Status = CourseStatus.Approved;
             await _ctx.UserInCourses.AddAsync(item);
             await _ctx.Save();
             return item;
@@ -55,22 +56,31 @@ namespace CompileLab.Repository.Repositories
             return userInCourse;
         }
 
-        //public async Task<UserInCourse> UpdateItem(int id, UserInCourse item)
-        //{
-        //    var existingItem = await _ctx.UserInCourses.FirstOrDefaultAsync(x => x.Id == id);
+        public async Task<UserInCourse?> GetByUserAndCourse(int courseId, int userId)
+        {
+            var uic = await _ctx.UserInCourses
+            .Include(uic => uic.Course)
+            .ThenInclude(c => c.Lecturer)
+            .Include(uic => uic.Student)
+            .Where(uic => uic.CourseId == courseId && uic.UserId == userId).FirstOrDefaultAsync();
+            return uic;
+        }
 
-        //    if (existingItem == null)
-        //    {
-        //        return null; 
-        //    }    
-            
+        public async Task<UserInCourse> UpdateItem(int id, UserInCourse item)
+        {
+            var existingItem = await _ctx.UserInCourses.FirstOrDefaultAsync(x => x.Id == id);
 
-        //    existingItem.UserId = item.UserId;
-        //    existingItem.CourseId = item.CourseId;
-            
-        //    await _ctx.Save();
+            if (existingItem == null)
+            {
+                return null;
+            }
 
-        //    return existingItem;
-        //}
+
+            existingItem.Status = item.Status;
+
+            await _ctx.Save();
+
+            return existingItem;
+        }
     }
 }

@@ -63,7 +63,6 @@ namespace CompileLab.Repository.Repositories
             existing.ExerciseName = item.ExerciseName;
             existing.Description = item.Description;
             existing.Language = item.Language;
-            existing.CourseId = item.CourseId;
 
             await _ctx.Save();
             return await GetById(id); 

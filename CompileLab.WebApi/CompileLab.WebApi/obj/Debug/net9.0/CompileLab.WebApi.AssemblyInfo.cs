@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompileLab.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbfc44384b8518b20646bb1e91b5a01d2cb36a50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e830bcc89929c06bb7e5eb1ef0712886d718d485")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompileLab.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompileLab.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -20,106 +20,51 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegisterDto user)
         {
-            try
-            {
-                var result = await _registerService.Register(user);
-                return Ok(result);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return Conflict(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _registerService.Register(user);
+            return Ok(result);
         }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto user)
         {
-            try
-            {
-                var result = await _loginService.Login(user);
-                return Ok(result);
-            }
-            catch (UnauthorizedAccessException ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _loginService.Login(user);
+            return Ok(result);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetALl()
         {
-            try
-            {
-                var users =  await _service.GetAll();
-                return Ok(users);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var users = await _service.GetAll();
+            return Ok(users);
         }
-
-      
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            try
+            var user = await _service.GetById(id);
+            if (user == null)
             {
-                var user = await _service.GetById(id);
-                if (user == null)
-                {
-                    return NotFound();
-                }
-                return Ok(user);
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(user);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            try
-            {
-                await _service.DeleteItem(id);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _service.DeleteItem(id);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] UserDto user, int id)
         {
-            try
+            var newUser = await _service.UpdateItem(id, user);
+            if (newUser == null)
             {
-                var newUser = await _service.UpdateItem(id, user);
-                if (newUser == null)
-                {
-                    return NotFound();
-                }
-                return Ok(newUser);
+                return NotFound();
             }
-            catch (InvalidOperationException ex)
-            {
-                return Conflict(new { message = ex.Message });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(newUser);
         }
     }
 }

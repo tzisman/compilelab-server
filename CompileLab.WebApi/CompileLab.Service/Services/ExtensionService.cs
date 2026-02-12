@@ -27,11 +27,12 @@ namespace CompileLab.Service.Services
             services.AddScoped<IService<UserInCourseDto>, UserInCourseService>();
             services.AddScoped<IService<CodeExerciseDto>, CodeExerciseService>();
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
+            services.AddScoped<IUserInCourseAuthorization, UserInCourseAuthorization>();
+            services.AddScoped<IAnswerAuthorization, AnswerAuthorization>();
             services.AddScoped<IService<StudentAnswerDto>, StudentAnswerService>();
             services.AddKeyedScoped<IAuthorization, CourseAuthorization>("course");
             services.AddKeyedScoped<IAuthorization, ExerciseAuthorization>("exercise");
             services.AddKeyedScoped<IAuthorization, TestCaseAuthorization>("testCase");
-            services.AddKeyedScoped<IAuthorization, UserInCourseAuthorization>("userInCourse");
             services.AddScoped<IToken<User>, TokenService>();
             return services;
         }

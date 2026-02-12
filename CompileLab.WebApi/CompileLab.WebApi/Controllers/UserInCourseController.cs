@@ -30,16 +30,8 @@ namespace CompileLab.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetALl()
         {
-            try
-            {
-                var useresInCourses = await _service.GetAll();
-                return Ok(useresInCourses);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            var useresInCourses = await _service.GetAll();
+            return Ok(useresInCourses);
         }
 
         [HttpGet("{id}")]

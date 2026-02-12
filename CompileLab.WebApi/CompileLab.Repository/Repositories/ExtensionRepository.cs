@@ -15,7 +15,7 @@ namespace CompileLab.Repository.Repositories
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IRepository<Course>, CourseRepository>();
-            services.AddScoped<IRepository<UserInCourse>, UserInCourseRepository>();
+            services.AddScoped<IUserInCourseRepository, UserInCourseRepository>();
             services.AddScoped<IRepository<CodeExercise>, CodeExerciseRepository>();
             services.AddScoped<IRepository<TestCase>, TestCaseRepository>();
             services.AddScoped<IRepository<StudentAnswer>, StudentAnswerRepository>();

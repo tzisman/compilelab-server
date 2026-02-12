@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class UserInCourseService(IRepository<UserInCourse> repository, IMapper mapper,
-        [FromKeyedServices("userInCourse")] IAuthorization uicAuth
+    public class UserInCourseService(IUserInCourseRepository repository, IMapper mapper,
+        IUserInCourseAuthorization uicAuth
         ) : IService<UserInCourseDto>
     {
-        private readonly IRepository<UserInCourse> _repository = repository;
+        private readonly IUserInCourseRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
         private readonly IAuthorization _uicAuth = uicAuth;
         public async Task<UserInCourseDto> AddItem(UserInCourseDto item)

@@ -19,52 +19,26 @@ namespace CompileLab.WebApi.Controllers
             {
                 return Unauthorized("You are not logged in.");
             }
-            try
-            {
-                var result = await _service.AddItem(testCaseDto, userId.Value);
-                return Ok(result);
-            }
-            catch (ForbiddenAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            var result = await _service.AddItem(testCaseDto, userId.Value);
+            return Ok(result);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetALl()
         {
-            try
-            {
-                var TestCasesDto = await _service.GetAll();
-                return Ok(TestCasesDto);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-
+            var TestCasesDto = await _service.GetAll();
+            return Ok(TestCasesDto);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            try
+            var result = await _service.GetById(id);
+            if (result == null)
             {
-                var result = await _service.GetById(id);
-                if (result == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result);
+                return NotFound();
             }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(result);
         }
 
         [HttpDelete("{id}")]
@@ -75,19 +49,8 @@ namespace CompileLab.WebApi.Controllers
             {
                 return Unauthorized("You are not logged in.");
             }
-            try
-            {
-                await _service.DeleteItem(id, userId.Value);
-                return NoContent();
-            }
-            catch (ForbiddenAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            await _service.DeleteItem(id, userId.Value);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
@@ -98,23 +61,12 @@ namespace CompileLab.WebApi.Controllers
             {
                 return Unauthorized("You are not logged in.");
             }
-            try
+            var result = await _service.UpdateItem(id, testCaseDto, userId.Value);
+            if (result == null)
             {
-                var result = await _service.UpdateItem(id, testCaseDto, userId.Value);
-                if (result == null)
-                {
-                    return NotFound();
-                }
-                return Ok(result);
+                return NotFound();
             }
-            catch (ForbiddenAccessException)
-            {
-                return Forbid();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
+            return Ok(result);
         }
     }
 }

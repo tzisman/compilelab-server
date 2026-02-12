@@ -53,7 +53,6 @@ namespace CompileLab.Repository.Repositories
             {
                 return null;
             }
-            course.LecturerId = item.LecturerId;
             course.Name = item.Name;
             await _ctx.Save();
             return course;

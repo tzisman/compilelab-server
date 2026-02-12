@@ -32,13 +32,12 @@ namespace CompileLab.WebApi
             {
                 Status = statusCode,
                 Title = title,
-                Detail = exception.Message, // בסביבת ייצור (Production) אולי תרצה להחליף להודעה כללית יותר
+                Detail = exception.Message,
                 Instance = $"{httpContext.Request.Method} {httpContext.Request.Path}"
             };
 
             await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken);
 
-            // מחזירים true כדי לציין שהשגיאה טופלה בשרשרת
             return true;
         }
     }

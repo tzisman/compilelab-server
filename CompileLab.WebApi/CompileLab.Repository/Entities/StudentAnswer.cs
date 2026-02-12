@@ -14,7 +14,7 @@ namespace CompileLab.Repository.Entities
         [Key]
         public int Id { get; set; }
 
-        public UserInCourse? StudentInCourse { get; set; }
+        public UserInCourse StudentInCourse { get; set; } =null!;
 
         [ForeignKey("StudentInCourse")]
         [Required]
