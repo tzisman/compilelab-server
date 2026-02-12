@@ -37,6 +37,12 @@ namespace CompileLab.Service.Services
 
         public async Task<UserDto> UpdateItem(int id, UserDto item)
         {
+            var email = await _repository.GetUserByEmail(item.Email);
+            if (email != null && email.Id != id)
+            {
+                throw new InvalidOperationException("The email already exists.");
+            }
+
             var user = _mapper.Map<User>(item);
             var result =await _repository.UpdateItem(id, user);
             var userDto = _mapper.Map<UserDto>(result);

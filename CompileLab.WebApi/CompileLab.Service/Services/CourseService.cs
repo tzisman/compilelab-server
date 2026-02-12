@@ -19,13 +19,6 @@ namespace CompileLab.Service.Services
         private readonly IRepository<Course> _repository = repository;
         private readonly IMapper _mapper = mapper;
         IAuthorization _courseAuth = courseAuth;
-        public async Task<CourseDto> AddItem(CourseDto item)
-        {
-            var course = _mapper.Map<Course>(item);
-            var result = await _repository.AddItem(course);
-            var newCourse = _mapper.Map<CourseDto>(result);
-            return newCourse;
-        }
 
         public async Task<CourseDto> AddItem(CourseDto item, int userId)
         {
@@ -39,10 +32,6 @@ namespace CompileLab.Service.Services
             return newCourse;
         }
 
-        public async Task DeleteItem(int id)
-        {
-            await _repository.DeleteItem(id);
-        }
 
         public async Task DeleteItem(int id, int userId)
         {
@@ -69,15 +58,6 @@ namespace CompileLab.Service.Services
         {
             var course = await _repository.GetById(id);
             var courseDto = _mapper.Map<CourseDto>(course);
-            return courseDto;
-        }
-
-        public async Task<CourseDto> UpdateItem(int id, CourseDto item)
-        {
-
-            var course = _mapper.Map<Course>(item);
-            var result = await _repository.UpdateItem(id, course);
-            var courseDto = _mapper.Map<CourseDto>(result);
             return courseDto;
         }
 

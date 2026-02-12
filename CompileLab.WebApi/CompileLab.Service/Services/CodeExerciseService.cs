@@ -22,13 +22,6 @@ namespace CompileLab.Service.Services
         private readonly IAuthorization _courseAuth = courseAuth;
         private readonly IAuthorization _exerciseAuth = exerciseAuth;
 
-        public async Task<CodeExerciseDto> AddItem(CodeExerciseDto item)
-        {
-            var codeExercise = _mapper.Map<CodeExercise>(item);
-            var result = await _repository.AddItem(codeExercise);
-            var newCodeExercise = _mapper.Map<CodeExerciseDto>(result);
-            return newCodeExercise;
-        }
 
         public async Task<CodeExerciseDto> AddItem(CodeExerciseDto item, int userId)
         {
@@ -43,10 +36,6 @@ namespace CompileLab.Service.Services
             return newCodeExercise;
         }
 
-        public async Task DeleteItem(int id)
-        {
-            await _repository.DeleteItem(id);
-        }
 
         public async Task DeleteItem(int id, int userId)
         {
@@ -71,13 +60,6 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
-        public  async Task<CodeExerciseDto> UpdateItem(int id, CodeExerciseDto item)
-        {
-            var codeExercise = _mapper.Map<CodeExercise>(item);
-            var result = await _repository.UpdateItem(id, codeExercise);
-            var resultDto = _mapper.Map<CodeExerciseDto>(result);
-            return resultDto;
-        }
 
         public async Task<CodeExerciseDto> UpdateItem(int id, CodeExerciseDto item, int userId)
         {

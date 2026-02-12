@@ -20,13 +20,6 @@ namespace CompileLab.Service.Services
         private readonly IMapper _mapper = mapper;
         private readonly IUserInCourseAuthorization _uicAuth = uicAuth;
         private readonly IAnswerAuthorization _answerAuth = answerAuth;
-        public async Task<StudentAnswerDto> AddItem(StudentAnswerDto item)
-        {
-            var studentAnswer = _mapper.Map<StudentAnswer>(item);
-            var result = await _repository.AddItem(studentAnswer);
-            var newStudentAnswer = _mapper.Map<StudentAnswerDto>(result);
-            return newStudentAnswer;
-        }
 
         public async Task<StudentAnswerDto> AddItem(StudentAnswerDto item, int userId)
         {
@@ -42,10 +35,7 @@ namespace CompileLab.Service.Services
             return newStudentAnswer;
         }
 
-        public async Task DeleteItem(int id)
-        {
-            await _repository.DeleteItem(id);
-        }
+
 
         public async Task DeleteItem(int id, int userId)
         {
@@ -71,13 +61,6 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
-        public async Task<StudentAnswerDto> UpdateItem(int id, StudentAnswerDto item)
-        {
-            var studentAnswer = _mapper.Map<StudentAnswer>(item);
-            var result = await _repository.UpdateItem(id, studentAnswer);
-            var resultDto = _mapper.Map<StudentAnswerDto>(result);
-            return resultDto;
-        }
 
         public async Task<StudentAnswerDto> UpdateItem(int id, StudentAnswerDto item, int userId)
         {

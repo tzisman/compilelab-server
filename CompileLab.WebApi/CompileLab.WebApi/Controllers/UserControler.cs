@@ -2,6 +2,8 @@ using CompileLab.Repository.Interfaces;
 using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
 using CompileLab.Service.Services;
+using CompileLab.WebApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata.Ecma335;
 
@@ -14,9 +16,9 @@ namespace CompileLab.WebApi.Controllers
         private readonly IRegister<UserRegisterDto> _registerService = registerService;
         private readonly ILogin<UserLoginDto> _loginService = loginSevice;
         private readonly IUserService _service = service;
-        
 
 
+        [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegisterDto user)
         {
@@ -24,6 +26,7 @@ namespace CompileLab.WebApi.Controllers
             return Ok(result);
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto user)
         {
@@ -31,6 +34,7 @@ namespace CompileLab.WebApi.Controllers
             return Ok(result);
         }
 
+        //[Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetALl()
         {
@@ -41,6 +45,15 @@ namespace CompileLab.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
+            var userId = User.GetUserId();
+
+            var isAdmin = User.IsInRole("Admin");
+
+            if (userId == null || (userId != id && !isAdmin))
+            {
+                return Forbid();
+            }
+
             var user = await _service.GetById(id);
             if (user == null)
             {
@@ -52,6 +65,15 @@ namespace CompileLab.WebApi.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            var userId = User.GetUserId();
+
+            var isAdmin = User.IsInRole("Admin");
+
+            if (userId == null || (userId != id && !isAdmin))
+            {
+                return Forbid();
+            }
+
             await _service.DeleteItem(id);
             return NoContent();
         }
@@ -59,6 +81,15 @@ namespace CompileLab.WebApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] UserDto user, int id)
         {
+            var userId = User.GetUserId();
+
+            var isAdmin = User.IsInRole("Admin");
+
+            if (userId == null || (userId != id && !isAdmin))
+            {
+                return Forbid();
+            }
+
             var newUser = await _service.UpdateItem(id, user);
             if (newUser == null)
             {

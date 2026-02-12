@@ -22,13 +22,6 @@ namespace CompileLab.Service.Services
         private readonly IAuthorization _testCaseAuth = testCaseAuth;
         private readonly IAuthorization _exerciseAuth = exerciseAuth;
 
-        public async Task<TestCaseDto> AddItem(TestCaseDto item)
-        {
-            var testCase = _mapper.Map<TestCase>(item);
-            var result = await _repository.AddItem(testCase);
-            var newTestCase = _mapper.Map<TestCaseDto>(result);
-            return newTestCase;
-        }
 
         public async Task<TestCaseDto> AddItem(TestCaseDto item, int userId)
         {
@@ -43,10 +36,6 @@ namespace CompileLab.Service.Services
             return newTestCase;
         }
 
-        public async Task DeleteItem(int id)
-        {
-            await _repository.DeleteItem(id);
-        }
 
         public async Task DeleteItem(int id, int userId)
         {
@@ -71,13 +60,6 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
-        public async Task<TestCaseDto> UpdateItem(int id, TestCaseDto item)
-        {
-            var testCase = _mapper.Map<TestCase>(item);
-            var result = await _repository.UpdateItem(id, testCase);
-            var resultDto = _mapper.Map<TestCaseDto>(result);
-            return resultDto;
-        }
 
         public async Task<TestCaseDto> UpdateItem(int id, TestCaseDto item, int userId)
         {
