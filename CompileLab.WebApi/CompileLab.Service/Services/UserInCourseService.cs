@@ -14,11 +14,11 @@ namespace CompileLab.Service.Services
 {
     public class UserInCourseService(IUserInCourseRepository repository, IMapper mapper,
         IUserInCourseAuthorization uicAuth
-        ) : IService<UserInCourseDto>
+        ) : IUserInCourseService
     {
         private readonly IUserInCourseRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
-        private readonly IAuthorization _uicAuth = uicAuth;
+        private readonly IUserInCourseAuthorization _uicAuth = uicAuth;
 
 
         public async Task<UserInCourseDto> AddItem(UserInCourseDto item, int userId)
@@ -26,6 +26,12 @@ namespace CompileLab.Service.Services
             if (item.UserId != userId)
             {
                 throw new ForbiddenAccessException("User is not authorized to add a course.");
+            }
+
+            var uic = await _repository.GetByUserAndCourse(item.CourseId, item.UserId);
+            if (uic != null)
+            {
+                throw new InvalidOperationException("You have already signed up for this course.");
             }
 
             var userInCourse = _mapper.Map<UserInCourse>(item);
@@ -59,13 +65,14 @@ namespace CompileLab.Service.Services
         }
 
 
-        public async Task<UserInCourseDto> UpdateItem(int id, UserInCourseDto item, int userId)
+        public async Task<UserInCourseDto> UpdateItem(int id, CourseStatus status, int userId)
         {
-            if (!await _uicAuth.IsOwnerOf(id, userId) || item.UserId != userId)
+            if (!await _uicAuth.IsLectureOf(id, userId))
             {
                 throw new ForbiddenAccessException("User is not authorized to update a course.");
             }
-            var userInCourse = _mapper.Map<UserInCourse>(item);
+            var userInCourse = await _repository.GetById(id);
+            userInCourse.Status = status;
             var result = await _repository.UpdateItem(id, userInCourse);
             var resultDto = _mapper.Map<UserInCourseDto>(result);
             return resultDto;

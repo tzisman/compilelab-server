@@ -1,5 +1,6 @@
 using CompileLab.DataContext;
 using CompileLab.Repository.Entities;
+using CompileLab.Repository.Interfaces;
 using CompileLab.Repository.Repositories;
 using CompileLab.Service.Authorization;
 using CompileLab.Service.Dto;
@@ -24,7 +25,7 @@ namespace CompileLab.Service.Services
             services.AddScoped<ILogin<UserLoginDto>, UserLoginService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IService<CourseDto>, CourseService>();
-            services.AddScoped<IService<UserInCourseDto>, UserInCourseService>();
+            services.AddScoped<IUserInCourseService, UserInCourseService>();
             services.AddScoped<IService<CodeExerciseDto>, CodeExerciseService>();
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
             services.AddScoped<IUserInCourseAuthorization, UserInCourseAuthorization>();

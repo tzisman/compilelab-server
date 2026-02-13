@@ -32,6 +32,14 @@ namespace CompileLab.Service.Authorization
             return uic.CourseId == exercise.CourseId;
         }
 
+        public async Task<bool> IsLectureOf(int userInCourseId, int userId)
+        {
+            var uic = await _repository.GetById(userInCourseId);
+            if (uic == null)
+                return false;
+            return uic.Course.LecturerId == userId;
+        }
+
         public async Task<bool> IsOwnerOf(int targetId, int userId)
         {
             var result = await _repository.GetById(targetId);

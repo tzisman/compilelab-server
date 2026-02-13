@@ -61,6 +61,33 @@ namespace CompileLab.WebApi.Controllers
             }
             return Ok(user);
         }
+        [HttpGet("{id}/courses")]
+        public async Task<IActionResult> GetCoursesByUser(int id)
+        {
+            var userId = User.GetUserId();
+
+            if (userId == null || (userId != id))
+            {
+                return Forbid();
+            }
+
+            var courses = await _service.GetCourseOfUser(id);
+            return Ok(courses);
+        }
+
+        [HttpGet("{id}/lecturers")]
+        public async Task<IActionResult> GetCoursesByLecturer(int id)
+        {
+            var userId = User.GetUserId();
+
+            if (userId == null || (userId != id))
+            {
+                return Forbid();
+            }
+
+            var courses = await _service.GetCourseOfLetucrer(id);
+            return Ok(courses);
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)

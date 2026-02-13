@@ -11,5 +11,7 @@ namespace CompileLab.Service.Interfaces
         Task<bool> IsInCourse(int exerciseId, int userInCourseId);
 
         Task<bool> IsAllowedToChange(int userInCourseId);
+
+        Task<bool> IsLectureOf(int userInCourseId, int userId);
     }
 }

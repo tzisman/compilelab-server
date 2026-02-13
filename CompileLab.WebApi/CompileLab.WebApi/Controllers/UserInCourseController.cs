@@ -1,5 +1,7 @@
+using CompileLab.Repository.Entities;
 using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
+using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,9 +9,9 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserInCourseController(IService<UserInCourseDto> service) : ControllerBase
+    public class UserInCourseController(IUserInCourseService service) : ControllerBase
     {
-        private readonly IService<UserInCourseDto> _service = service;
+        private readonly IUserInCourseService _service = service;
 
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] UserInCourseDto userInCourseDto)
@@ -46,26 +48,26 @@ namespace CompileLab.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = User.GetUserId();
-            if (userId == null)
-            {
-                return Unauthorized("You are not logged in.");
-            }
-            await _service.DeleteItem(id, userId.Value);
-            return NoContent();
-        }
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    var userId = User.GetUserId();
+        //    if (userId == null)
+        //    {
+        //        return Unauthorized("You are not logged in.");
+        //    }
+        //    await _service.DeleteItem(id, userId.Value);
+        //    return NoContent();
+        //}
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody] UserInCourseDto userInCourseDto, int id)
+        public async Task<IActionResult> Update([FromBody] CourseStatus status, int id)
         {
             var userId = User.GetUserId();
             if (userId == null)
             {
                 return Unauthorized("You are not logged in.");
             }
-            var result= await _service.UpdateItem(id, userInCourseDto, userId.Value);
+            var result = await _service.UpdateItem(id, status, userId.Value);
             if (result == null)
             {
                 return NotFound();

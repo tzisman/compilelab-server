@@ -6,6 +6,7 @@ using CompileLab.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,20 @@ namespace CompileLab.Service.Services
             var user = await _repository.GetById(id);
             var userDto = _mapper.Map<UserDto>(user);
             return userDto;
+        }
+
+        public async Task<List<CourseDto>> GetCourseOfLetucrer(int id)
+        {
+            var courses = await _repository.GetCourseOfLecturer(id);
+            var coursesDto = _mapper.Map<List<CourseDto>>(courses);
+            return coursesDto;
+        }
+
+        public async Task<List<CourseDto>> GetCourseOfUser(int id)
+        {
+            var courses = await _repository.GetCourseOfUser(id);
+            var coursesDto = _mapper.Map<List<CourseDto>>(courses);
+            return coursesDto;
         }
 
         public async Task<UserDto> UpdateItem(int id, UserDto item)

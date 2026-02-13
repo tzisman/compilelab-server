@@ -663,6 +663,52 @@
         }
       }
     },
+    "/api/User/{id}/courses": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/User/{id}/lecturers": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/UserInCourse": {
       "post": {
         "tags": [
@@ -741,6 +787,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseStatus"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseStatus"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CourseStatus"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -766,17 +831,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserInCourseDto"
+                "$ref": "#/components/schemas/CourseStatus"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/UserInCourseDto"
+                "$ref": "#/components/schemas/CourseStatus"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/UserInCourseDto"
+                "$ref": "#/components/schemas/CourseStatus"
               }
             }
           }
@@ -883,6 +948,14 @@
           }
         },
         "additionalProperties": false
+      },
+      "CourseStatus": {
+        "enum": [
+          "Sent",
+          "Approved",
+          "Rejected"
+        ],
+        "type": "string"
       },
       "ProgrammingLanguage": {
         "enum": [

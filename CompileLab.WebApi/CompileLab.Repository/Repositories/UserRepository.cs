@@ -45,6 +45,25 @@ namespace CompileLab.Repository.Repositories
             return user;
         }
 
+        public async Task<List<Course>> GetCourseOfLecturer(int id)
+        {
+            var courses = await _ctx.Courses
+            .Where(uc => uc.LecturerId == id)
+            .ToListAsync();
+
+            return courses;
+        }
+
+        public async Task<List<Course>> GetCourseOfUser(int id)
+        {
+            var courses = await _ctx.UserInCourses
+            .Where(uc => uc.UserId == id)
+            .Select(uc => uc.Course)
+            .ToListAsync();
+
+            return courses;
+        }
+
         public async Task<User> GetUserByEmail(string email)
         {
             var user = await _ctx.Users.FirstOrDefaultAsync(x => x.Email == email);

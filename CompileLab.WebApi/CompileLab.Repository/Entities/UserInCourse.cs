@@ -19,7 +19,7 @@ namespace CompileLab.Repository.Entities
             [Key]
             public int Id { get; set; }
 
-        public User? Student { get; set; } = null!;
+        public User Student { get; set; } = null!;
 
             [ForeignKey("Student")]
             [Required]

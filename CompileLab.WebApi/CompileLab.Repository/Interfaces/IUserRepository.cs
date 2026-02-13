@@ -10,5 +10,10 @@ namespace CompileLab.Repository.Interfaces
     public interface IUserRepository : IRepository<User>
     {
         public Task<User> GetUserByEmail(string email);
+
+        Task<List<Course>> GetCourseOfUser(int id);
+        Task<List<Course>> GetCourseOfLecturer(int id);
+
+
     }
 }
