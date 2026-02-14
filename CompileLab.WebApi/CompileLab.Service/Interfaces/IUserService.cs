@@ -14,8 +14,8 @@ namespace CompileLab.Service.Interfaces
         Task<UserDto> GetById(int id);
         Task<List<CourseDto>> GetCourseOfUser(int id);
         Task<List<CourseDto>> GetCourseOfLetucrer(int id);
+        Task<List<CourseReqwestDto>> GetReqwestOfUser(int id);
         Task<UserDto> UpdateItem(int id, UserDto item);
         Task DeleteItem(int id);
-
     }
 }

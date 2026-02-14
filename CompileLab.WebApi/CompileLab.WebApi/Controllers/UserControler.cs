@@ -89,6 +89,20 @@ namespace CompileLab.WebApi.Controllers
             return Ok(courses);
         }
 
+        [HttpGet("{id}/reqwest")]
+        public async Task<IActionResult> GetReqwestByUser(int id)
+        {
+            var userId = User.GetUserId();
+
+            if (userId == null || (userId != id))
+            {
+                return Forbid();
+            }
+
+            var courses = await _service.GetReqwestOfUser(id);
+            return Ok(courses);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

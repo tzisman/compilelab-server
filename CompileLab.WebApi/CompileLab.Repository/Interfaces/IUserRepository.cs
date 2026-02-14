@@ -13,6 +13,7 @@ namespace CompileLab.Repository.Interfaces
 
         Task<List<Course>> GetCourseOfUser(int id);
         Task<List<Course>> GetCourseOfLecturer(int id);
+        Task<List<UserInCourse>> GetReqwestOfUser(int id);
 
 
     }

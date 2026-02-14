@@ -50,6 +50,14 @@ namespace CompileLab.Service.Services
             return coursesDto;
         }
 
+        public async Task<List<CourseReqwestDto>> GetReqwestOfUser(int id)
+        {
+            var reqwests = await _repository.GetReqwestOfUser(id);
+            var reqwestsDto = _mapper.Map<List<CourseReqwestDto>>(reqwests);
+
+            return reqwestsDto;
+        }
+
         public async Task<UserDto> UpdateItem(int id, UserDto item)
         {
             var email = await _repository.GetUserByEmail(item.Email);
