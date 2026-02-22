@@ -1,271 +1,347 @@
-﻿//using CompileLab.Repository.Entities;
-//using CompileLab.Service.Dto;
-//using System;
-//using System.Collections.Generic;
-//using System.Diagnostics;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using CompileLab.Repository.Entities;
+using CompileLab.Service.Dto;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace CompileLab.Service.Services
-//{
-//    internal static class Tools
-//    {
-//        private static SemaphoreSlim _semaphore = new SemaphoreSlim(4);
+namespace CompileLab.Service.Services
+{
+    internal static class Tools
+    {
+        private static SemaphoreSlim _semaphore = new SemaphoreSlim(Math.Max(1, Environment.ProcessorCount / 2));
 
-//        public static void CleanupOldTests(string basePath)
-//        {
-//            try
-//            {
-//                if (!Directory.Exists(basePath)) return;
-//                DateTime threshold = DateTime.Now.AddDays(-1);
-//                var directories = Directory.GetDirectories(basePath);
+        public static void CleanupOldTests(string basePath)
+        {
+            try
+            {
+                if (!Directory.Exists(basePath)) return;
+                DateTime threshold = DateTime.Now.AddDays(-1);
+                var directories = Directory.GetDirectories(basePath);
 
-//                foreach (var dir in directories)
-//                {
-//                    DirectoryInfo dirInfo = new DirectoryInfo(dir);
+                foreach (var dir in directories)
+                {
+                    DirectoryInfo dirInfo = new DirectoryInfo(dir);
 
-//                    if (dirInfo.LastWriteTime < threshold)
-//                    {
-//                        try
-//                        {
-//                            Directory.Delete(dir, true);
-//                        }
-//                        catch (Exception)
-//                        {
-                            
-//                        }
-//                    }
-//                }
-//            }
-//            catch (UnauthorizedAccessException ex)
-//            {
-//                throw new UnauthorizedAccessException("No permission to delete folders", ex);
-//            }
-//            catch (Exception ex)
-//            {
-//                throw new Exception("General cleanup error", ex);
-//            }
-//        }
+                    if (dirInfo.LastWriteTime < threshold)
+                    {
+                        try
+                        {
+                            Directory.Delete(dir, true);
+                        }
+                        catch (Exception)
+                        {
 
-//        public static string SaveCodeToFile(StudentAnswer studentAnswer)
-//        {
-//            string uniqueRunName = DateTime.Now.ToString("yyyyMMdd_HHmmss_fff") + "_" + Guid.NewGuid().ToString().Substring(0, 4);
-//            string studentDir = Path.Combine(Directory.GetCurrentDirectory(), "TempTests", uniqueRunName);
+                        }
+                    }
+                }
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                throw new UnauthorizedAccessException("No permission to delete folders", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("General cleanup error", ex);
+            }
+        }
 
-//            if (!Directory.Exists(studentDir)) Directory.CreateDirectory(studentDir);
+        public static string SaveCodeToFile(StudentAnswer studentAnswer)
+        {
+            string uniqueRunName = DateTime.Now.ToString("yyyyMMdd_HHmmss_fff") + "_" + Guid.NewGuid().ToString().Substring(0, 4);
+            string studentDir = Path.Combine(Path.GetTempPath(), "CompileLab", uniqueRunName);
 
-//            string projectName = studentAnswer.Exercise.Language switch
-//            {
-//                ProgrammingLanguage.csharp => "Program.cs",
-//                ProgrammingLanguage.python => "main.py",
-//                _ => throw new NotSupportedException("Unsupported programming language")
-//            };
+            if (!Directory.Exists(studentDir)) Directory.CreateDirectory(studentDir);
 
-//            string fullPath = Path.Combine(studentDir, projectName);
-//            File.WriteAllText(fullPath, studentAnswer.AnswerCode);
+            string projectName = studentAnswer.Exercise.Language switch
+            {
+                ProgrammingLanguage.csharp => "Program.cs",
+                ProgrammingLanguage.python => "main.py",
+                _ => throw new NotSupportedException("Unsupported programming language")
+            };
 
-//            return studentDir;
-//        }
-//        public static async Task<(bool Success, string Details)> CompileCodeAsync(string folderPath)
-//        {
-//            string csprojContent = @"<Project Sdk=""Microsoft.NET.Sdk"">
-//                <PropertyGroup>
-//                <OutputType>Exe</OutputType>
-//                <TargetFramework>net9.0</TargetFramework>
-//                <ImplicitUsings>enable</ImplicitUsings>
-//                <Nullable>enable</Nullable>
-//                <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
-//              </PropertyGroup>
-//            </Project>";
+            string fullPath = Path.Combine(studentDir, projectName);
+            if (studentAnswer.AnswerCode.Length > 50000)
+                throw new Exception("Code too long");
+            File.WriteAllText(fullPath, studentAnswer.AnswerCode);
 
-//            await File.WriteAllTextAsync(Path.Combine(folderPath, "Project.csproj"), csprojContent);
+            return studentDir;
+        }
+        public static async Task<(bool Success, string Details)> CompileCodeAsync(string folderPath)
+        {
+            string csprojContent = @"<Project Sdk=""Microsoft.NET.Sdk"">
+                <PropertyGroup>
+                <OutputType>Exe</OutputType>
+                <TargetFramework>net9.0</TargetFramework>
+                <ImplicitUsings>enable</ImplicitUsings>
+                <Nullable>enable</Nullable>
+                <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+              </PropertyGroup>
+            </Project>";
 
-//            var psi = new ProcessStartInfo
-//            {
-//                FileName = "dotnet",
-//                Arguments = $"publish \"{Path.Combine(folderPath, "Project.csproj")}\" -c Release -r linux-x64 --self-contained false -o \"{Path.Combine(folderPath, "publish")}\" /nologo",
-//                RedirectStandardOutput = true,
-//                RedirectStandardError = true,
-//                UseShellExecute = false,
-//                CreateNoWindow = true
-//            };
+            await File.WriteAllTextAsync(Path.Combine(folderPath, "Project.csproj"), csprojContent);
 
-//            using var process = Process.Start(psi);
-//            string output = await process.StandardOutput.ReadToEndAsync();
-//            string error = await process.StandardError.ReadToEndAsync();
-//            process.WaitForExit();
+            var psi = new ProcessStartInfo
+            {
+                FileName = "dotnet",
+                Arguments = $"publish \"{Path.Combine(folderPath, "Project.csproj")}\" -c Release -r linux-x64 --self-contained false -o \"{Path.Combine(folderPath, "publish")}\" /nologo",
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
 
-//            if (File.Exists(Path.Combine(folderPath, "publish", "Project.dll")))
-//            {
-//                return (true, "Success");
-//            }
+            using var process = Process.Start(psi);
+            string output = await process.StandardOutput.ReadToEndAsync();
+            string error = await process.StandardError.ReadToEndAsync();
+            await process.WaitForExitAsync();
 
-//            return (false, output + error);
-//        }
+            if (File.Exists(Path.Combine(folderPath, "publish", "Project.dll")))
+            {
+                return (true, "Success");
+            }
 
-//        public static async Task<(bool Success, string Output)> ExecuteTestAsync(string folderPath, StudentAnswer studentAnswer, params string[] inputs)
-//        {
-//            ProgrammingLanguage pl = studentAnswer.Exercise.Language;
-//            await _semaphore.WaitAsync();
-//            string testerImage = pl switch
-//            {
-//                ProgrammingLanguage.csharp => "tester-csharp:1.0",
-//                ProgrammingLanguage.python => "tester-python:1.0",
-//                _ => throw new NotSupportedException("Unsupported programming language")
-//            };
+            return (false, output + error);
+        }
 
-//            string mountSource = pl == ProgrammingLanguage.csharp
-//                ? Path.Combine(folderPath, "publish")
-//                : folderPath;
+        public static async Task<(bool Success, string Output)> ExecuteTestAsync(string folderPath, StudentAnswer studentAnswer, params string[] inputs)
+        {
+            ProgrammingLanguage pl = studentAnswer.Exercise.Language;
+            await _semaphore.WaitAsync();
+            string testerImage = pl switch
+            {
+                ProgrammingLanguage.csharp => "tester-csharp:1.0",
+                ProgrammingLanguage.python => "tester-python:1.0",
+                _ => throw new NotSupportedException("Unsupported programming language")
+            };
 
-//            string runCommand = pl == ProgrammingLanguage.csharp
-//                ? "dotnet /app/Project.dll"
-//                : "python /app/main.py";
+            string mountSource = pl == ProgrammingLanguage.csharp
+                ? Path.Combine(folderPath, "publish")
+                : folderPath;
 
-//            try
-//            {
-//                string ramLimit = "--memory=128m";
-//                string cpuLimit = "--cpus=0.3";
-//                string network = "--network none";
-//                string readOnly = "--read-only";
-//                string tempFs = "--tmpfs /tmp:exec,mode=1777";
-//                string user = "--user 1000:1000";
-//                string runId = Guid.NewGuid().ToString().Substring(0, 8);
+            string runCommand = pl == ProgrammingLanguage.csharp
+                ? "dotnet /app/Project.dll"
+                : "python /app/main.py";
 
-//                var psi = new ProcessStartInfo
-//                {
-//                    FileName = "docker",
+            try
+            {
+                string ramLimit = "--memory=128m";
+                string cpuLimit = "--cpus=0.3";
+                string network = "--network none";
+                string readOnly = "--read-only";
+                string tempFs = "--tmpfs /tmp:exec,mode=1777";
+                string user = "--user 1000:1000";
+                string runId = Guid.NewGuid().ToString().Substring(0, 8);
 
-//                    Arguments = $"run --rm --init --name test_{runId} -i " +
-//                    $"{ramLimit} {cpuLimit} {network} {readOnly} {tempFs} {user} " +
-//                    $"-v \"{mountSource}:/app:ro\" " +
-//                    $"{testerImage} " +
-//                    $"{runCommand}",
-//                    RedirectStandardInput = true,
-//                    RedirectStandardOutput = true,
-//                    RedirectStandardError = true,
-//                    UseShellExecute = false,
-//                    CreateNoWindow = true
-//                };
+                var psi = new ProcessStartInfo
+                {
+                    FileName = "docker",
 
-//                using var process = new Process { StartInfo = psi };
-//                process.Start();
+                    Arguments = $"run --rm --init --name test_{runId} -i " +
+                    $"{ramLimit} {cpuLimit} {network} {readOnly} {tempFs} {user} " +
+                    $"-v \"{mountSource}:/app:ro\" " +
+                    $"{testerImage} " +
+                    $"{runCommand}",
+                    RedirectStandardInput = true,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
 
-//                // הזרקת קלטים (Inputs)
-//                using (var sw = process.StandardInput)
-//                {
-//                    foreach (var line in inputs)
-//                        await sw.WriteLineAsync(line);
-//                }
+                using var process = new Process { StartInfo = psi };
+                process.Start();
 
-//                var outputTask = process.StandardOutput.ReadToEndAsync();
-//                var errorTask = process.StandardError.ReadToEndAsync();
+                // הזרקת קלטים (Inputs)
+                using (var sw = process.StandardInput)
+                {
+                    foreach (var line in inputs)
+                        await sw.WriteLineAsync(line);
+                }
 
-//                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10)); // טיימר חיצוני של 10 שניות לכל התהליך
-//                try
-//                {
-//                    await process.WaitForExitAsync(cts.Token);
-//                }
-//                catch (OperationCanceledException)
-//                {
-//                    if (!process.HasExited) process.Kill(true);
-//                    return new TestResult { Success = false, Error = "Time Limit Exceeded" };
-//                }
-//                string rawOutput = await outputTask;
-//                string rawError = await errorTask;
-//                string fullLog = rawOutput + rawError;
+                var outputTask = process.StandardOutput.ReadToEndAsync();
+                var errorTask = process.StandardError.ReadToEndAsync();
 
-//                if (process.ExitCode == 0)
-//                {
-//                    return new TestResult
-//                    {
-//                        Success = true,
-//                        Output = CleanOutput(rawOutput),
-//                        RawDetails = fullLog
-//                    };
-//                }
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10)); // טיימר חיצוני של 10 שניות לכל התהליך
+                try
+                {
+                    await process.WaitForExitAsync(cts.Token);
+                }
+                catch (OperationCanceledException)
+                {
+                    if (!process.HasExited) process.Kill(true);
+                    return (false, "Time Limit Exceeded");
+                }
+                string rawOutput = await outputTask;
+                string rawError = await errorTask;
+                string fullLog = rawOutput + rawError;
 
-//                return new TestResult
-//                {
-//                    Success = false,
-//                    Error = "Runtime Error",
-//                    Output = CleanOutput(rawOutput),
-//                    RawDetails = fullLog
-//                };
-//            }
-//            finally
-//            {
-//                _semaphore.Release(); // משחרר את המשבצת לסטודנט הבא
-//            }
+                if (process.ExitCode == 0)
+                {
+                    if(pl == ProgrammingLanguage.python)
+                    {
+                        return (true, CleanPythonRuntimeError(rawOutput));
+                    }
+                    return (true, CleanOutput(rawOutput));
+                }
+                if(pl == ProgrammingLanguage.python)
+                {
+                    return (false, CleanPythonRuntimeError(rawError));
+                }
+                return (false, CleanOutput(rawError));
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
 
-//        }
-//        public static async Task<AnswerMarkDto> Test(List<TestCase> cases, string folderPath, StudentAnswer studentAnswer)
-//        {
-//            try
-//            {
-//                AnswerMarkDto answerMark = new AnswerMarkDto { IsSuccess = false, Mark = 0, Remark = null };
-//                if (studentAnswer.Exercise.Language == ProgrammingLanguage.csharp)
-//                {
-//                    var (Success, Details) = await CompileCodeAsync(folderPath);
+        }
+        public static async Task<AnswerMarkDto> Test(List<TestCase> cases, string folderPath, StudentAnswer studentAnswer)
+        {
+            try
+            {
+                AnswerMarkDto answerMark = new AnswerMarkDto { IsSuccess = false, Mark = 0, Remark = null };
+                if (studentAnswer.Exercise.Language == ProgrammingLanguage.csharp)
+                {
+                    var (Success, Details) = await CompileCodeAsync(folderPath);
 
-//                    if (!Success)
-//                    {
+                    if (!Success)
+                    {
+                        answerMark.TypeError = "CompilationError";
+                        answerMark.ErrorMessage = CleanCompilationError(Details);
+                        return answerMark;
+                    }
+                }
 
-//                        answerMark.TypeError = "CompilationError";
-//                        answerMark.ErrorMessage = CleanCompilationError(Details);
-//                        return answerMark;
-//                    }
-//                }
+                List<string> errores = new List<string>();
+                int numOfSucces = 0;
 
-//                List<string> errores = new List<string>();
-//                int numOfSucces = 0;
+                foreach (TestCase testCase in cases)
+                {
 
-//                foreach (TestCase testCase in cases)
-//                {
-//                    var (Success, Output)= await Tools.ExecuteTestAsync(folderPath, pl, [.. edge.Inputs]);
+                    var (Success, Output) = await Tools.ExecuteTestAsync(folderPath, studentAnswer, testCase.Input.Split(','));
 
-//                    if (Tools.CheckingSucces(result, edge.Output))
-//                    {
-//                        numOfSucces++;
-//                    }
-//                    else if (result.Success)
-//                    {
-//                        errores.Add($"the expected output was: {edge.Output} the real output was: {result.Output}");
-//                    }
-//                    else
-//                    {
-//                        errores.Add($"{result.Error}: {result.RawDetails}");
-//                    }
-//                }
+                    if (Success && Tools.CheckingSucces(Output, testCase.Output))
+                    {
+                        numOfSucces++;
+                    }
 
-//                Console.WriteLine($"Mark: {numOfSucces}/{edges.Count}");
-//                if (errores.Count > 0)
-//                {
-//                    Console.WriteLine("Your Errors:");
-//                    foreach (string str in errores) Console.WriteLine(str);
-//                }
-//            }
-//            catch (Exception ex)
-//            {
-//                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
-//            }
-//            finally
-//            {
-//                try
-//                {
-//                    if (Directory.Exists(folderPath))
-//                    {
-//                        await Task.Delay(500);
-//                        Directory.Delete(folderPath, true);
-//                        Console.WriteLine($"--- Cleanup: Folder {folderPath} deleted ---");
-//                    }
-//                }
-//                catch (IOException ex)
-//                {
-//                    Console.WriteLine($"Cleanup warning: Could not delete folder immediately. {ex.Message}");
-//                }
-//            }
-//        }
-//    }
-//}
+                    else if (Success)
+                    {
+                        errores.Add($"the expected output was: {testCase.Output} the real output was: {Output}");
+                    }
+
+                    else
+                    {
+                        errores.Add($"{Output}");
+                    }
+                }
+
+                double mark = (double)numOfSucces / cases.Count * 100;
+                
+                answerMark.Mark = mark;
+                answerMark.ErrorMessage = string.Join("\n", errores);
+                answerMark.IsSuccess = numOfSucces == cases.Count;
+                return answerMark;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Testing error", ex);
+            }
+            finally
+            {
+                try
+                {
+                    if (Directory.Exists(folderPath))
+                    {
+                        await Task.Delay(500);
+                        Directory.Delete(folderPath, true);
+                    }
+                }
+                catch (IOException)
+                {   
+                }
+            }
+        }
+
+        public static bool CheckingSucces(string result, string expectedOutput)
+        {
+            return result.Trim() == expectedOutput.Trim();
+        }
+        public static string CleanOutput(string raw)
+        {
+            if (string.IsNullOrWhiteSpace(raw)) return "";
+
+            var forbiddenKeywords = new[] { "Restore complete", "Build succeeded", "warning CS", ".csproj", "Determine projects" };
+
+            var lines = raw.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            var cleanLines = lines
+                .Select(l => l.Trim())
+                .Where(l => !forbiddenKeywords.Any(k => l.Contains(k)));
+
+            return string.Join(Environment.NewLine, cleanLines).Trim();
+        }
+        public static string CleanPythonRuntimeError(string rawError)
+        {
+            if (string.IsNullOrWhiteSpace(rawError)) return "Unknown Error";
+
+            
+            var lines = rawError.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
+                                .Select(l => l.Trim())
+                                .ToList();
+
+            if (lines.Count == 0) return "Unknown Error";
+
+            string errorDescription = lines.Last(l => !string.IsNullOrWhiteSpace(l));
+
+
+            string location = "";
+            for (int i = lines.Count - 1; i >= 0; i--)
+            {
+                if (lines[i].Contains("line "))
+                {
+                    
+                    var match = System.Text.RegularExpressions.Regex.Match(lines[i], @"line \d+");
+                    if (match.Success)
+                    {
+                        location = match.Value;
+                        break;
+                    }
+                }
+            }
+
+            if (!string.IsNullOrEmpty(location))
+            {
+                return $"{errorDescription} ({location})";
+            }
+
+            return errorDescription;
+        }
+        public static string CleanCompilationError(string rawDetails)
+        {
+            if (string.IsNullOrWhiteSpace(rawDetails)) return "";
+
+            var lines = rawDetails.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            var errorLines = lines
+                .Where(l => l.Contains(": error "))
+                .Select(l => {
+                    int bracketIndex = l.LastIndexOf(" [");
+                    string cleanLine = bracketIndex != -1 ? l.Substring(0, bracketIndex) : l;
+
+                    int errorLabelIndex = cleanLine.IndexOf("error ");
+                    if (errorLabelIndex != -1)
+                    {
+                        return cleanLine.Substring(errorLabelIndex).Trim();
+                    }
+
+                    return cleanLine.Trim();
+                })
+                .Distinct();
+
+            return string.Join(Environment.NewLine, errorLines);
+        }
+    }
+}

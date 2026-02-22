@@ -21,8 +21,6 @@ namespace CompileLab.Service.Services
             services.AddAutoMapper(typeof(MapperProfile));
             services.AddDataLayer(connectionString);
             services.AddRepository();
-            services.AddScoped<IRegister<UserRegisterDto>, UserRegisterService>();
-            services.AddScoped<ILogin<UserLoginDto>, UserLoginService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IService<CourseDto>, CourseService>();
             services.AddScoped<IUserInCourseService, UserInCourseService>();

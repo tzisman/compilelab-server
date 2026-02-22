@@ -11,10 +11,8 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class UserController(IRegister<UserRegisterDto> registerService, ILogin<UserLoginDto> loginSevice, IUserService service) : ControllerBase
+    public class UserController(IUserService service) : ControllerBase
     {
-        private readonly IRegister<UserRegisterDto> _registerService = registerService;
-        private readonly ILogin<UserLoginDto> _loginService = loginSevice;
         private readonly IUserService _service = service;
 
 
@@ -22,7 +20,7 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegisterDto user)
         {
-            var result = await _registerService.Register(user);
+            var result = await _service.Register(user);
             return Ok(result);
         }
 
@@ -30,7 +28,7 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto user)
         {
-            var result = await _loginService.Login(user);
+            var result = await _service.Login(user);
             return Ok(result);
         }
 

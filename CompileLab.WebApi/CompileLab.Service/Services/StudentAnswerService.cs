@@ -64,7 +64,7 @@ namespace CompileLab.Service.Services
         public async Task<AnswerMarkDto> GetMark(int id)
         {
             var answer = await _repository.GetById(id);
-            Tools.SaveCodeToFile(answer);
+            //Tools.SaveCodeToFile(answer);
             return null;
         }
 

@@ -17,5 +17,10 @@ namespace CompileLab.Service.Interfaces
         Task<List<CourseReqwestDto>> GetReqwestOfUser(int id);
         Task<UserDto> UpdateItem(int id, UserDto item);
         Task DeleteItem(int id);
+
+        public Task<string> Login(UserLoginDto item);
+
+        public Task<string> Register(UserRegisterDto item);
+
     }
 }

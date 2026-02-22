@@ -12,10 +12,11 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class UserService(IUserRepository repository, IMapper mapper) : IUserService
+    public class UserService(IUserRepository repository, IMapper mapper, IToken<User> token) : IUserService
     {
         private readonly IUserRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
+        private readonly IToken<User> _tokenService = token;
 
         public async Task DeleteItem(int id)
         {
@@ -71,5 +72,37 @@ namespace CompileLab.Service.Services
             var userDto = _mapper.Map<UserDto>(result);
             return userDto;
         }
+
+        public async Task<string> Login(UserLoginDto item)
+        {
+            var user = await _repository.GetUserByEmail(item.Email);
+            if (user != null)
+            {
+                bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(item.Password, user.PasswordHash);
+                if (isPasswordCorrect)
+                {
+                    var jwt = _tokenService.CreateToken(user);
+                    return jwt;
+                }
+            }
+            throw new UnauthorizedAccessException("email or passwors is incorrect");
+
+        }
+
+        public async Task<string> Register(UserRegisterDto item)
+        {
+            var email = await _repository.GetUserByEmail(item.Email);
+            if (email != null)
+            {
+                throw new InvalidOperationException("The email already exists.");
+            }
+
+            User user = _mapper.Map<User>(item);
+            user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(item.Password);
+            User newUser = await _repository.AddItem(user);
+            var jwt = _tokenService.CreateToken(newUser);
+            return jwt;
+        }
+
     }
 }
