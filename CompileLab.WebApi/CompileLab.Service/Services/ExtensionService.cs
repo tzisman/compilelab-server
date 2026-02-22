@@ -30,7 +30,7 @@ namespace CompileLab.Service.Services
             services.AddScoped<IService<TestCaseDto>, TestCaseService>();
             services.AddScoped<IUserInCourseAuthorization, UserInCourseAuthorization>();
             services.AddScoped<IAnswerAuthorization, AnswerAuthorization>();
-            services.AddScoped<IService<StudentAnswerDto>, StudentAnswerService>();
+            services.AddScoped<IStudentAnswerService, StudentAnswerService>();
             services.AddKeyedScoped<IAuthorization, CourseAuthorization>("course");
             services.AddKeyedScoped<IAuthorization, ExerciseAuthorization>("exercise");
             services.AddKeyedScoped<IAuthorization, TestCaseAuthorization>("testCase");

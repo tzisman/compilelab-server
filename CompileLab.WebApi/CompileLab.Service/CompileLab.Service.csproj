@@ -17,4 +17,8 @@
     <ProjectReference Include="..\CompileLab.Repository\CompileLab.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Docker\" />
+  </ItemGroup>
+
 </Project>

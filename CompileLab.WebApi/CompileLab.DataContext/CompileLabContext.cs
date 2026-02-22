@@ -42,14 +42,6 @@ namespace CompileLab.DataContext
                 .HasForeignKey(c => c.LecturerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            modelBuilder.Entity<UserInCourse>()
-                .Property(uic => uic.Status)
-                .HasConversion<string>();
-
-            modelBuilder.Entity<CodeExercise>()
-                .Property(ce => ce.Language)
-                .HasConversion<string>();
-
 
             modelBuilder.Entity<UserInCourse>()
                 .HasIndex(uic => new { uic.UserId, uic.CourseId })

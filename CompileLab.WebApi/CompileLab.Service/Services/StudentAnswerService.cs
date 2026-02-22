@@ -14,7 +14,7 @@ namespace CompileLab.Service.Services
     public class StudentAnswerService(IRepository<StudentAnswer> repository, IMapper mapper,
         IAnswerAuthorization answerAuth,
         IUserInCourseAuthorization uicAuth
-        ) : IService<StudentAnswerDto>
+        ) : IStudentAnswerService
     {
         private readonly IRepository<StudentAnswer> _repository = repository;
         private readonly IMapper _mapper = mapper;
@@ -61,6 +61,12 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
+        public async Task<AnswerMarkDto> GetMark(int id)
+        {
+            var answer = await _repository.GetById(id);
+            Tools.SaveCodeToFile(answer);
+            return null;
+        }
 
         public async Task<StudentAnswerDto> UpdateItem(int id, StudentAnswerDto item, int userId)
         {

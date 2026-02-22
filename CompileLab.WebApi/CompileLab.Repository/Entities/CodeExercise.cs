@@ -10,8 +10,8 @@ namespace CompileLab.Repository.Entities
 {
     public enum ProgrammingLanguage
     {
-        CSharp,
-        Python
+        csharp,
+        python
     }
 
     public class CodeExercise

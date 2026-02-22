@@ -57,7 +57,7 @@ namespace CompileLab.Repository.Repositories
         public async Task<List<Course>> GetCourseOfUser(int id)
         {
             var courses = await _ctx.UserInCourses
-            .Where(uc => uc.UserId == id && uc.Status == CourseStatus.Approved)
+            .Where(uc => uc.UserId == id && uc.Status == CourseStatus.approved)
             .Select(uc => uc.Course)
             .ToListAsync();
 
@@ -70,7 +70,7 @@ namespace CompileLab.Repository.Repositories
                 .Include(uic => uic.Course)
                 .ThenInclude(c => c.Lecturer)
                 .Include(uic => uic.Student)
-                .Where(uc => uc.Course.LecturerId == id && uc.Status == CourseStatus.Sent).ToListAsync();
+                .Where(uc => uc.Course.LecturerId == id && uc.Status == CourseStatus.sent).ToListAsync();
 
             return reqwests;
         }

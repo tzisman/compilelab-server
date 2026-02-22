@@ -91,7 +91,6 @@ namespace CompileLab.WebApi
             
             app.UseHttpsRedirection();
             app.UseAuthorization();
-
             app.MapControllers();
 
             app.Run();

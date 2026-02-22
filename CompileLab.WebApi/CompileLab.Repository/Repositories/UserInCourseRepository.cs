@@ -15,7 +15,7 @@ namespace CompileLab.Repository.Repositories
 
         public async Task<UserInCourse> AddItem(UserInCourse item)
         {
-            item.Status = CourseStatus.Sent;
+            item.Status = CourseStatus.sent;
             //item.Status = CourseStatus.Approved;
             await _ctx.UserInCourses.AddAsync(item);
             await _ctx.Save();

@@ -20,7 +20,7 @@ namespace CompileLab.Service.Authorization
             var result = await _repository.GetById(userInCourseId);
             if(result == null)
                 return false;
-            return result.Status == CourseStatus.Approved;
+            return result.Status == CourseStatus.approved;
         }
 
         public async Task<bool> IsInCourse(int exerciseId, int userInCourseId)

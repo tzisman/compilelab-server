@@ -10,9 +10,9 @@ namespace CompileLab.Repository.Entities
 {
         public enum CourseStatus
         {
-            Sent,
-            Approved,
-            Rejected
+            sent,
+            approved,
+            rejected
         }
         public class UserInCourse
         {

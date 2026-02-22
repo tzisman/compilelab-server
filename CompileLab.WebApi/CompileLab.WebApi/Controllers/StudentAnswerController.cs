@@ -7,9 +7,9 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class StudentAnswerController(IService<StudentAnswerDto> service) : ControllerBase
+    public class StudentAnswerController(IStudentAnswerService service) : ControllerBase
     {
-        private readonly IService<StudentAnswerDto> _service = service;
+        private readonly IStudentAnswerService _service = service;
 
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] StudentAnswerDto studentAnswerDto)
@@ -41,6 +41,17 @@ namespace CompileLab.WebApi.Controllers
                 return NotFound();
             }
             return Ok(studentAnswer);
+        }
+
+        [HttpGet("mark/{id}")]
+        public async Task<IActionResult> GetMarkById(int id)
+        {
+            var mark = await _service.GetMark(id);
+            if (mark == null)
+            {
+                return NotFound();
+            }
+            return Ok(mark);
         }
 
         [HttpDelete("{id}")]

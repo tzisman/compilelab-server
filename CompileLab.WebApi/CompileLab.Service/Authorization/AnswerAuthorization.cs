@@ -18,7 +18,7 @@ namespace CompileLab.Service.Authorization
             var result = await _repository.GetById(answerId);
             if (result == null) return false;
             
-            return result.StudentInCourse.Status == CourseStatus.Approved;
+            return result.StudentInCourse.Status == CourseStatus.approved;
         }
 
         public async Task<bool> IsOwnerOf(int targetId, int userId)
