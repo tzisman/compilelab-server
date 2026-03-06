@@ -64,8 +64,9 @@ namespace CompileLab.Service.Services
         public async Task<AnswerMarkDto> GetMark(int id)
         {
             var answer = await _repository.GetById(id);
-            //Tools.SaveCodeToFile(answer);
-            return null;
+            if(answer == null)
+                throw new KeyNotFoundException();
+            return await Tools.GetMark(answer);
         }
 
         public async Task<StudentAnswerDto> UpdateItem(int id, StudentAnswerDto item, int userId)

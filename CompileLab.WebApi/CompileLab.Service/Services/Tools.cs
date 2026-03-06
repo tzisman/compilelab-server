@@ -198,7 +198,7 @@ namespace CompileLab.Service.Services
             }
 
         }
-        public static async Task<AnswerMarkDto> Test(List<TestCase> cases, string folderPath, StudentAnswer studentAnswer)
+        public static async Task<AnswerMarkDto> Test(ICollection<TestCase> cases, string folderPath, StudentAnswer studentAnswer)
         {
             try
             {
@@ -238,8 +238,10 @@ namespace CompileLab.Service.Services
                         errores.Add($"{Output}");
                     }
                 }
+                double mark = 0;
 
-                double mark = (double)numOfSucces / cases.Count * 100;
+                if (cases.Count != 0)
+                    mark = (double)numOfSucces / cases.Count * 100;
                 
                 answerMark.Mark = mark;
                 answerMark.ErrorMessage = string.Join("\n", errores);
@@ -287,37 +289,35 @@ namespace CompileLab.Service.Services
         {
             if (string.IsNullOrWhiteSpace(rawError)) return "Unknown Error";
 
-            
+            // פיצול לשורות וניקוי רווחים
             var lines = rawError.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                                 .Select(l => l.Trim())
                                 .ToList();
 
             if (lines.Count == 0) return "Unknown Error";
 
-            string errorDescription = lines.Last(l => !string.IsNullOrWhiteSpace(l));
+            // 1. חילוץ השורה האחרונה (סוג השגיאה והתיאור)
+            // דוגמה: "IndexError: list index out of range"
+            string finalError = lines.Last();
 
+            // 2. חיפוש מספר השורה בתוך ה-Traceback באמצעות Regex
+            // מחפש את התבנית "line" ואחריה מספר
+            string lineInfo = "unknown line";
+            var lineRegex = new System.Text.RegularExpressions.Regex(@"line (\d+)");
 
-            string location = "";
+            // עוברים מהסוף להתחלה כדי למצוא את המיקום המדויק ביותר בקוד הסטודנט
             for (int i = lines.Count - 1; i >= 0; i--)
             {
-                if (lines[i].Contains("line "))
+                var match = lineRegex.Match(lines[i]);
+                if (match.Success)
                 {
-                    
-                    var match = System.Text.RegularExpressions.Regex.Match(lines[i], @"line \d+");
-                    if (match.Success)
-                    {
-                        location = match.Value;
-                        break;
-                    }
+                    lineInfo = $"Line {match.Groups[1].Value}";
+                    break;
                 }
             }
 
-            if (!string.IsNullOrEmpty(location))
-            {
-                return $"{errorDescription} ({location})";
-            }
-
-            return errorDescription;
+            // החזרת פורמט ידידותי: "סוג השגיאה: תיאור (Line X)"
+            return $"{finalError} ({lineInfo})";
         }
         public static string CleanCompilationError(string rawDetails)
         {
@@ -342,6 +342,13 @@ namespace CompileLab.Service.Services
                 .Distinct();
 
             return string.Join(Environment.NewLine, errorLines);
+        }
+
+        public async static Task<AnswerMarkDto> GetMark(StudentAnswer studentAnswer)
+        {
+            string folderPath = SaveCodeToFile(studentAnswer);
+            ICollection<TestCase> cases = studentAnswer.Exercise.EdgeCases;
+            return await Test(cases, folderPath, studentAnswer);
         }
     }
 }
