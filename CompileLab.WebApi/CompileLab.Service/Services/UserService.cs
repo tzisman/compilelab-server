@@ -104,5 +104,11 @@ namespace CompileLab.Service.Services
             return jwt;
         }
 
+        public async Task<UserDto> GetUserByEmail(string email)
+        {
+            var user = await _repository.GetUserByEmail(email);
+            var userDto = _mapper.Map<UserDto>(user);
+            return userDto;
+        }
     }
 }

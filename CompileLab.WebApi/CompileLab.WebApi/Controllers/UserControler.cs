@@ -20,16 +20,18 @@ namespace CompileLab.WebApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserRegisterDto user)
         {
-            var result = await _service.Register(user);
-            return Ok(result);
+            var token = await _service.Register(user);
+            var newUser = await _service.GetUserByEmail(user.Email);
+            return Ok(new { token = token, user = newUser });
         }
 
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLoginDto user)
         {
-            var result = await _service.Login(user);
-            return Ok(result);
+            var token = await _service.Login(user);
+            var newUser = await _service.GetUserByEmail(user.Email);
+            return Ok(new {token = token, user = newUser});
         }
 
         //[Authorize(Roles = "Admin")]

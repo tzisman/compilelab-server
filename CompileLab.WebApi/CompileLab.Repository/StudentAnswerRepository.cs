@@ -37,8 +37,8 @@ namespace CompileLab.Repository
                 .Include(a => a.Exercise)
                     .ThenInclude(ex => ex.Course)
                         .ThenInclude(c => c.Lecturer)
-                .Include(a => a.Exercise) // טעינה חוזרת של Exercise כדי להגיע למקרי הקצה
-                    .ThenInclude(ex => ex.EdgeCases) // הוספת מקרי הקצה 
+                .Include(a => a.Exercise) 
+                    .ThenInclude(ex => ex.EdgeCases) 
                 .Include(a => a.StudentInCourse)
                     .ThenInclude(uic => uic.Student)
                 .ToListAsync();
@@ -50,8 +50,8 @@ namespace CompileLab.Repository
                 .Include(a => a.Exercise)
                     .ThenInclude(ex => ex.Course)
                         .ThenInclude(c => c.Lecturer)
-                .Include(a => a.Exercise) // טעינה חוזרת של Exercise כדי להגיע למקרי הקצה
-                    .ThenInclude(ex => ex.EdgeCases) // הוספת מקרי הקצה 
+                .Include(a => a.Exercise) 
+                    .ThenInclude(ex => ex.EdgeCases) 
                 .Include(a => a.StudentInCourse)
                     .ThenInclude(uic => uic.Student).FirstOrDefaultAsync(x => x.Id == id);
 
