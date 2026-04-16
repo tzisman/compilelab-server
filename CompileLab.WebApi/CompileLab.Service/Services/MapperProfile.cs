@@ -17,6 +17,7 @@ namespace CompileLab.Service.Services
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<User, UserLoginDto>().ReverseMap();
             CreateMap<Course, CourseDto>().ReverseMap();
+            CreateMap<Course, CourseDisplayDto>().ReverseMap();
             CreateMap<UserInCourse, UserInCourseDto>().ReverseMap();
             CreateMap<CodeExercise, CodeExerciseDto>().ReverseMap();
             CreateMap<TestCase, TestCaseDto>().ReverseMap();

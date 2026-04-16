@@ -17,5 +17,7 @@ namespace CompileLab.Service.Dto
 
         [Required]
         public int CourseId { get; set; }
+
+        public string? Message { get; set; }
     }
 }

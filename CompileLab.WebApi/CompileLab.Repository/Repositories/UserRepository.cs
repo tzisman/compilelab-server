@@ -48,7 +48,10 @@ namespace CompileLab.Repository.Repositories
         public async Task<List<Course>> GetCourseOfLecturer(int id)
         {
             var courses = await _ctx.Courses
+            .AsNoTracking()
             .Where(uc => uc.LecturerId == id)
+            .Include(c => c.Studies)
+            .Include(c => c.Exercises)
             .ToListAsync();
 
             return courses;

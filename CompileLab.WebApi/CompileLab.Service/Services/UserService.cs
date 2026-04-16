@@ -37,10 +37,10 @@ namespace CompileLab.Service.Services
             return userDto;
         }
 
-        public async Task<List<CourseDto>> GetCourseOfLetucrer(int id)
+        public async Task<List<CourseDisplayDto>> GetCourseOfLecturer(int id)
         {
             var courses = await _repository.GetCourseOfLecturer(id);
-            var coursesDto = _mapper.Map<List<CourseDto>>(courses);
+            var coursesDto = _mapper.Map<List<CourseDisplayDto>>(courses);
             return coursesDto;
         }
 

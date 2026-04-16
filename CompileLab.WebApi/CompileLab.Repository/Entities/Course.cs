@@ -24,5 +24,6 @@ namespace CompileLab.Repository.Entities
         public int LecturerId { get; set; }
 
         public ICollection<UserInCourse> Studies { get; set; } = new List<UserInCourse>();
+        public ICollection<CodeExercise> Exercises { get; set; } = new List<CodeExercise>();
     }
 }

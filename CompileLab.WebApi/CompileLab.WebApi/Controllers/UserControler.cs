@@ -85,7 +85,7 @@ namespace CompileLab.WebApi.Controllers
                 return Forbid();
             }
 
-            var courses = await _service.GetCourseOfLetucrer(id);
+            var courses = await _service.GetCourseOfLecturer(id);
             return Ok(courses);
         }
 

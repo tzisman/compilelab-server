@@ -3,12 +3,10 @@ using CompileLab.Repository.Interfaces;
 using CompileLab.Service.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
 using System.Text;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
 namespace CompileLab.WebApi
 {
     public class Program
@@ -16,6 +14,8 @@ namespace CompileLab.WebApi
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            // --- 1. הגדרת שירותים (Services) ---
 
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -30,7 +30,6 @@ namespace CompileLab.WebApi
             {
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "CompileLab API", Version = "v1" });
 
-
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -42,21 +41,22 @@ namespace CompileLab.WebApi
                 });
 
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            Array.Empty<string>()
-        }
-    });
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
             });
 
+            // הגדרת Authentication
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -79,7 +79,22 @@ namespace CompileLab.WebApi
             builder.Services.AddServices(connectionString);
             builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
             builder.Services.AddProblemDetails();
+
+            // הגדרת מדיניות ה-CORS
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowReactApp",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
+
             var app = builder.Build();
+
+            // --- 2. הגדרת ה-Pipeline (סדר הפעולות קריטי כאן!) ---
 
             app.UseExceptionHandler();
 
@@ -88,13 +103,20 @@ namespace CompileLab.WebApi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            
+
+            // סדר ה-Middleware:
             app.UseHttpsRedirection();
-            app.UseAuthorization();
-            app.MapControllers();
+
+            app.UseRouting(); // הפעלת מערכת הניתוב
+
+            app.UseCors("AllowReactApp"); // חייב לבוא אחרי UseRouting ולפני Authentication
+
+            app.UseAuthentication(); // בדיקה מי המשתמש
+            app.UseAuthorization();  // בדיקה מה מותר למשתמש לעשות
+
+            app.MapControllers(); // שליחת הבקשה לקונטרולר המתאים
 
             app.Run();
-
         }
     }
 }

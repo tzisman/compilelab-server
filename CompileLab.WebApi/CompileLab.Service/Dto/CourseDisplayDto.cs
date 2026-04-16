@@ -7,20 +7,15 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Dto
 {
-    public class CourseReqwestDto
+    public class CourseDisplayDto
     {
         [Required]
         public int Id { get; set; }
-
         [Required]
-        public string StudentName { get; set; }
+        public string Name { get; set; }
+        public int StudiesCount { get; set; }
 
-        [Required]
-        public string CourseName { get; set; }
+        public int ExercisesCount { get; set; }
 
-        [Required]
-        public DateTime RequestDate { get; set; }
-
-        public string? Message { get; set; }
-        }
+    }
 }

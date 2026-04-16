@@ -24,8 +24,6 @@ namespace CompileLab.Repository.Entities
             [ForeignKey("Student")]
             [Required]
             public int UserId { get; set; }
-
-
             public Course Course { get; set; } = null!;
 
             [ForeignKey("Course")]
@@ -33,6 +31,9 @@ namespace CompileLab.Repository.Entities
             public int CourseId { get; set; }
 
             public CourseStatus Status { get; set; }
+            public DateTime RequestDate { get; set; }
+
+            public string? Message { get; set; }
 
             public ICollection<StudentAnswer> Answers { get; set; } = new List<StudentAnswer>();
         }
