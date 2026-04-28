@@ -8,9 +8,9 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TestCaseController(IService<TestCaseDto> service) : ControllerBase
+    public class TestCaseController(ITestCaseService service) : ControllerBase
     {
-        private readonly IService<TestCaseDto> _service = service;
+        private readonly ITestCaseService _service = service;
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] TestCaseDto testCaseDto)
         {
@@ -66,6 +66,14 @@ namespace CompileLab.WebApi.Controllers
             {
                 return NotFound();
             }
+            return Ok(result);
+        }
+
+        [HttpGet("exercise/{exerciseId}")]
+        public async Task<IActionResult> GetByExerciseId(int exerciseId)
+        {
+            var result = await _service.GetTestcaseByExerciseId(exerciseId);
+
             return Ok(result);
         }
     }

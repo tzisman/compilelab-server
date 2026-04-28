@@ -11,9 +11,9 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CourseController(IService<CourseDto> service) : ControllerBase
+    public class CourseController(ICourseService service) : ControllerBase
     {
-        private readonly IService<CourseDto> _service = service;
+        private readonly ICourseService _service = service;
         
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] CourseDto courseDto)

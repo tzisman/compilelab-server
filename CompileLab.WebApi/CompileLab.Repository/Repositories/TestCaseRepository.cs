@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Repository.Repositories
 {
-    public class TestCaseRepository(IContext context) : IRepository<TestCase>
+    public class TestCaseRepository(IContext context) : ITestCaseRepository
     {
         private readonly IContext _ctx = context;
         public async Task<TestCase> AddItem(TestCase item)
@@ -50,6 +50,16 @@ namespace CompileLab.Repository.Repositories
                 return null;
             }
             return testCase;
+        }
+
+        public async Task<List<TestCase>> GetTeseCaseByExerciseId(int exerciseId)
+        {
+            return await _ctx.TestCases.
+                Where(tc => tc.ExerciseId == exerciseId)
+                 .Include(tc => tc.Exercise)
+                     .ThenInclude(ex => ex.Course)
+                         .ThenInclude(c => c.Lecturer)
+                 .ToListAsync();
         }
 
         public async Task<TestCase> UpdateItem(int id, TestCase item)

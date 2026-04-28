@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class TestCaseService(IRepository<TestCase> repository, IMapper mapper,
+    public class TestCaseService(ITestCaseRepository repository, IMapper mapper,
         [FromKeyedServices("testCase")] IAuthorization testCaseAuth,
         [FromKeyedServices("exercise")] IAuthorization exerciseAuth
-        ) : IService<TestCaseDto>
+        ) : ITestCaseService
     {
-        private readonly IRepository<TestCase> _repository = repository;
+        private readonly ITestCaseRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
         private readonly IAuthorization _testCaseAuth = testCaseAuth;
         private readonly IAuthorization _exerciseAuth = exerciseAuth;
@@ -60,6 +60,12 @@ namespace CompileLab.Service.Services
             return resultDto;
         }
 
+        public async Task<List<TestCaseDto>> GetTestcaseByExerciseId(int exerciseId)
+        {
+            var result = await _repository.GetTeseCaseByExerciseId(exerciseId);
+            var resultDto = _mapper.Map<List<TestCaseDto>>(result);
+            return resultDto;
+        }
 
         public async Task<TestCaseDto> UpdateItem(int id, TestCaseDto item, int userId)
         {

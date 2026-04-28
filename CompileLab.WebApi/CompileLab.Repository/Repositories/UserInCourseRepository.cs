@@ -84,5 +84,16 @@ namespace CompileLab.Repository.Repositories
 
             return existingItem;
         }
+
+        public async Task<List<UserInCourse>> GetCourseDataForReport(int courseId)
+        {
+            return await _ctx.UserInCourses
+                .Include(uic => uic.Student)
+                .Include(uic => uic.Answers)
+                .Include(uic => uic.Course)
+                    .ThenInclude(c => c.Exercises)
+                .Where(uic => uic.CourseId == courseId && uic.Status == CourseStatus.approved)
+                .ToListAsync();
+        }
     }
 }

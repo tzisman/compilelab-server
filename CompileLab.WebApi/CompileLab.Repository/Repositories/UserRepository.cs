@@ -50,6 +50,7 @@ namespace CompileLab.Repository.Repositories
             var courses = await _ctx.Courses
             .AsNoTracking()
             .Where(uc => uc.LecturerId == id)
+            .Include(c => c.Lecturer)
             .Include(c => c.Studies)
             .Include(c => c.Exercises)
             .ToListAsync();
@@ -60,9 +61,12 @@ namespace CompileLab.Repository.Repositories
         public async Task<List<Course>> GetCourseOfUser(int id)
         {
             var courses = await _ctx.UserInCourses
-            .Where(uc => uc.UserId == id && uc.Status == CourseStatus.approved)
-            .Select(uc => uc.Course)
-            .ToListAsync();
+                .Where(uc => uc.UserId == id && uc.Status == CourseStatus.approved)
+                .Include(uc => uc.Course.Lecturer)  
+                .Include(uc => uc.Course.Studies)   
+                .Include(uc => uc.Course.Exercises) 
+                .Select(uc => uc.Course)            
+                .ToListAsync();
 
             return courses;
         }

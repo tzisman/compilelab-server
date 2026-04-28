@@ -32,13 +32,15 @@ namespace CompileLab.Repository.Repositories
 
         public async Task<List<Course>> GetAll()
         {
-            return await _ctx.Courses.Include(c => c.Lecturer).Include(c => c.Exercises).ToListAsync();
+            return await _ctx.Courses.Include(c => c.Lecturer).Include(c => c.Exercises)
+                .Include(c => c.Studies).ToListAsync();
         }
 
 
         public async Task<Course> GetById(int id)
         {
-            var course = await _ctx.Courses.Include(c => c.Lecturer).Include(c => c.Exercises).FirstOrDefaultAsync(x => x.Id == id);
+            var course = await _ctx.Courses.Include(c => c.Lecturer).Include(c => c.Exercises)
+                .Include(c => c.Studies).FirstOrDefaultAsync(x => x.Id == id);
             return course;
         }
 

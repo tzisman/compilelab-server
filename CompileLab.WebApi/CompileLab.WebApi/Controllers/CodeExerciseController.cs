@@ -8,9 +8,9 @@ namespace CompileLab.WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CodeExerciseController(IService<CodeExerciseDto> service) : ControllerBase
+    public class CodeExerciseController(IExerciseService service) : ControllerBase
     {
-        private readonly IService<CodeExerciseDto> _service = service;
+        private readonly IExerciseService _service = service;
 
         [HttpPost]
         public async Task<IActionResult> AddItem([FromBody] CodeExerciseDto codeExerciseDto)
@@ -64,6 +64,17 @@ namespace CompileLab.WebApi.Controllers
                 return Unauthorized("You are not logged in.");
             }
             var result = await _service.UpdateItem(id, codeExerciseDto, userId.Value);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("course/{courseId}")]
+        public async Task<IActionResult> GetByCourseId(int courseId)
+        {
+            var result = await _service.GetExercisesByCourseId(courseId);
             if (result == null)
             {
                 return NotFound();

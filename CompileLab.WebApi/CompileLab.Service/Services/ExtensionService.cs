@@ -22,10 +22,10 @@ namespace CompileLab.Service.Services
             services.AddDataLayer(connectionString);
             services.AddRepository();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IService<CourseDto>, CourseService>();
+            services.AddScoped<ICourseService, CourseService>();
             services.AddScoped<IUserInCourseService, UserInCourseService>();
-            services.AddScoped<IService<CodeExerciseDto>, CodeExerciseService>();
-            services.AddScoped<IService<TestCaseDto>, TestCaseService>();
+            services.AddScoped<IExerciseService, CodeExerciseService>();
+            services.AddScoped<ITestCaseService, TestCaseService>();
             services.AddScoped<IUserInCourseAuthorization, UserInCourseAuthorization>();
             services.AddScoped<IAnswerAuthorization, AnswerAuthorization>();
             services.AddScoped<IStudentAnswerService, StudentAnswerService>();

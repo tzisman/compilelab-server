@@ -28,11 +28,11 @@ namespace CompileLab.Service.Services
                 throw new ForbiddenAccessException("User is not authorized to add a course.");
             }
 
-            var uic = await _repository.GetByUserAndCourse(item.CourseId, item.UserId);
-            if (uic != null)
-            {
-                throw new InvalidOperationException("You have already signed up for this course.");
-            }
+            //var uic = await _repository.GetByUserAndCourse(item.CourseId, item.UserId);
+            //if (uic != null)
+            //{
+            //    throw new InvalidOperationException("You have already signed up for this course.");
+            //}
 
             var userInCourse = _mapper.Map<UserInCourse>(item);
             var result = await _repository.AddItem(userInCourse);
@@ -76,6 +76,27 @@ namespace CompileLab.Service.Services
             var result = await _repository.UpdateItem(id, userInCourse);
             var resultDto = _mapper.Map<UserInCourseDto>(result);
             return resultDto;
+        }
+
+        public async Task<List<CourseReportDto>> GetCourseReportAsync(int courseId)
+        {
+            var studentsInCourse = await _repository.GetCourseDataForReport(courseId);
+
+            var allExercises = studentsInCourse.FirstOrDefault()?.Course.Exercises.ToList() ?? new List<CodeExercise>();
+
+            var report = studentsInCourse.Select(uic => new CourseReportDto
+            {
+                StudentId = uic.Student.Id,
+                StudentName = uic.Student.Name,
+                Exercises = allExercises.Select(ex => new ExerciseGradeDto
+                {
+                    ExerciseId = ex.Id,
+                    ExerciseName = ex.ExerciseName,
+                    Grade = uic.Answers.FirstOrDefault(a => a.ExerciseId == ex.Id)?.Mark
+                }).ToList()
+            }).ToList();
+
+            return report;
         }
     }
 }

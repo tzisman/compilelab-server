@@ -13,9 +13,11 @@ namespace CompileLab.Service.Dto
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public string LecturerName { get; set; }
         public int StudiesCount { get; set; }
 
         public int ExercisesCount { get; set; }
+        
 
     }
 }

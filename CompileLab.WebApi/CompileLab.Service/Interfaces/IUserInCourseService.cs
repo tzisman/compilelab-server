@@ -15,7 +15,7 @@ namespace CompileLab.Service.Interfaces
         Task<UserInCourseDto> AddItem(UserInCourseDto item, int userId);
         Task<UserInCourseDto> UpdateItem(int id, CourseStatus status, int userId);
         Task DeleteItem(int id, int userId);
-        
 
+        Task<List<CourseReportDto>> GetCourseReportAsync(int courseId);
     }
 }

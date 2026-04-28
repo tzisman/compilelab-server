@@ -5,6 +5,7 @@ using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 using System.Reflection.Metadata.Ecma335;
 
 namespace CompileLab.WebApi.Controllers
@@ -61,45 +62,45 @@ namespace CompileLab.WebApi.Controllers
             }
             return Ok(user);
         }
-        [HttpGet("{id}/courses")]
-        public async Task<IActionResult> GetCoursesByUser(int id)
+        [HttpGet("courses")]
+        public async Task<IActionResult> GetCoursesByUser()
         {
             var userId = User.GetUserId();
 
-            if (userId == null || (userId != id))
+            if (userId == null)
             {
-                return Forbid();
+                return Unauthorized();
             }
 
-            var courses = await _service.GetCourseOfUser(id);
+            var courses = await _service.GetCourseOfUser(userId.Value);
             return Ok(courses);
         }
 
-        [HttpGet("{id}/lecturers")]
-        public async Task<IActionResult> GetCoursesByLecturer(int id)
+        [HttpGet("lecturers")]
+        public async Task<IActionResult> GetCoursesByLecturer()
         {
             var userId = User.GetUserId();
 
-            if (userId == null || (userId != id))
+            if (userId == null)
             {
-                return Forbid();
+                return Unauthorized();
             }
 
-            var courses = await _service.GetCourseOfLecturer(id);
+            var courses = await _service.GetCourseOfLecturer(userId.Value);
             return Ok(courses);
         }
 
-        [HttpGet("{id}/reqwest")]
-        public async Task<IActionResult> GetReqwestByUser(int id)
+        [HttpGet("requests")]
+        public async Task<IActionResult> GetReqwestByUser()
         {
             var userId = User.GetUserId();
 
-            if (userId == null || (userId != id))
+            if (userId == null)
             {
-                return Forbid();
+                return Unauthorized();
             }
 
-            var courses = await _service.GetReqwestOfUser(id);
+            var courses = await _service.GetReqwestOfUser(userId.Value);
             return Ok(courses);
         }
 

@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 namespace CompileLab.Service.Authorization
 {
     public class UserInCourseAuthorization(IUserInCourseRepository repository,
-        IRepository<CodeExercise> exerciseRepo) : IUserInCourseAuthorization
+        IExerciseRepository exerciseRepo) : IUserInCourseAuthorization
     {
         private readonly IUserInCourseRepository _repository = repository;
-        private readonly IRepository<CodeExercise> _exerciseRepo = exerciseRepo;
+        private readonly IExerciseRepository _exerciseRepo = exerciseRepo;
 
         public async Task<bool> IsAllowedToChange(int userInCourseId)
         {

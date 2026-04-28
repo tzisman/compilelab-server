@@ -39,12 +39,20 @@ namespace CompileLab.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-             var userInCourse = await _service.GetById(id);
-             if (userInCourse == null)
-             {
-                 return NotFound();
-             }
-             return Ok(userInCourse);
+            var userInCourse = await _service.GetById(id);
+            if (userInCourse == null)
+            {
+                return NotFound();
+            }
+            return Ok(userInCourse);
+        }
+
+        [HttpGet("GetReport/{courseId}")]
+        public async Task<IActionResult> GetReport(int courseId)
+        {
+            var report = await _service.GetCourseReportAsync(courseId);
+            
+            return Ok(report);
         }
 
         [HttpDelete("{id}")]
@@ -60,14 +68,14 @@ namespace CompileLab.WebApi.Controllers
         //}
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody] CourseStatus status, int id)
+        public async Task<IActionResult> Update([FromBody] StatusDto status, int id)
         {
             var userId = User.GetUserId();
             if (userId == null)
             {
                 return Unauthorized("You are not logged in.");
             }
-            var result = await _service.UpdateItem(id, status, userId.Value);
+            var result = await _service.UpdateItem(id, status.Status, userId.Value);
             if (result == null)
             {
                 return NotFound();

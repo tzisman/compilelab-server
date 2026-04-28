@@ -10,5 +10,6 @@ namespace CompileLab.Repository.Interfaces
     public interface IUserInCourseRepository : IRepository<UserInCourse>
     {
         public Task<UserInCourse?> GetByUserAndCourse(int courseId, int userId);
+        public Task<List<UserInCourse>> GetCourseDataForReport(int courseId);
     }
 }

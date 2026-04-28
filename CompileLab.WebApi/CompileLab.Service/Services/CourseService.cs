@@ -14,7 +14,7 @@ namespace CompileLab.Service.Services
 {
     public class CourseService(IRepository<Course> repository, IMapper mapper,
         [FromKeyedServices("course")] IAuthorization courseAuth
-        ) : IService<CourseDto>
+        ) : ICourseService
     {
         private readonly IRepository<Course> _repository = repository;
         private readonly IMapper _mapper = mapper;
@@ -47,17 +47,17 @@ namespace CompileLab.Service.Services
             await _repository.DeleteItem(id);
         }
 
-        public async Task<List<CourseDto>> GetAll()
+        public async Task<List<CourseDisplayDto>> GetAll()
         {
             var courses = await _repository.GetAll();
-            var coursesDto = _mapper.Map<List<CourseDto>>(courses);
+            var coursesDto = _mapper.Map<List<CourseDisplayDto>>(courses);
             return coursesDto;
         }
 
-        public async Task<CourseDto> GetById(int id)
+        public async Task<CourseDisplayDto> GetById(int id)
         {
             var course = await _repository.GetById(id);
-            var courseDto = _mapper.Map<CourseDto>(course);
+            var courseDto = _mapper.Map<CourseDisplayDto>(course);
             return courseDto;
         }
 
@@ -73,5 +73,7 @@ namespace CompileLab.Service.Services
             var courseDto = _mapper.Map<CourseDto>(result);
             return courseDto;
         }
+
+        
     }
 }
