@@ -78,5 +78,45 @@ namespace CompileLab.Service.Services
             var resultDto = _mapper.Map<CodeExerciseDto>(result);
             return resultDto;
         }
+
+        public async Task<List<ExerciseDisplayDto>> GetStudentExerciseListAsync(int courseId, int userId)
+        {
+            var exercises = await _repository.GetExercisesWithGradesByCourse(courseId, userId);
+
+            return exercises.Select(ce => new ExerciseDisplayDto
+            {
+                Id = ce.Id,
+                Name = ce.ExerciseName,
+                Description = ce.Description ?? "",
+                ProgrammingLanguage = ce.Language.ToString(),
+                Grade = ce.StudentAnswers.FirstOrDefault()?.Mark,
+                StudentAnswerId = ce.StudentAnswers.FirstOrDefault()?.Id
+            }).ToList(); 
+        }
+
+        public async Task<ExerciseDisplayDto?> GetExerciseForStudent(int exerciseId, int userId)
+        {
+            var exercise = await _repository.GetExerciseWithStudentAnswer(exerciseId, userId);
+
+            if (exercise == null)
+            {
+                return null;
+            }
+
+            var firstAnswer = exercise.StudentAnswers.FirstOrDefault();
+
+            
+            var dto = new ExerciseDisplayDto
+            {
+                Id = exercise.Id,
+                Name = exercise.ExerciseName,
+                Description = exercise.Description ?? string.Empty,
+                ProgrammingLanguage = exercise.Language.ToString(),
+                Grade = firstAnswer?.Mark,
+                StudentAnswerId = firstAnswer?.Id
+            };
+
+            return dto;
+        }
     }
 }

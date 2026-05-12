@@ -23,6 +23,8 @@ namespace CompileLab.Service.Services
             CreateMap<TestCase, TestCaseDto>().ReverseMap();
             CreateMap<StudentAnswer, StudentAnswerDto>().ReverseMap();
             CreateMap<UserInCourse, CourseReqwestDto>().ReverseMap();
+            CreateMap<UserInCourse, UserInCourseDisplayDto>().ReverseMap();
+
         }
     }
 }

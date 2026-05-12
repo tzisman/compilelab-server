@@ -58,14 +58,13 @@ namespace CompileLab.Repository.Repositories
             return courses;
         }
 
-        public async Task<List<Course>> GetCourseOfUser(int id)
+        public async Task<List<UserInCourse>> GetCourseOfUser(int id)
         {
             var courses = await _ctx.UserInCourses
                 .Where(uc => uc.UserId == id && uc.Status == CourseStatus.approved)
                 .Include(uc => uc.Course.Lecturer)  
                 .Include(uc => uc.Course.Studies)   
-                .Include(uc => uc.Course.Exercises) 
-                .Select(uc => uc.Course)            
+                .Include(uc => uc.Course.Exercises)            
                 .ToListAsync();
 
             return courses;

@@ -77,5 +77,24 @@ namespace CompileLab.Repository.Repositories
             await _ctx.Save();
             return await GetById(id); 
         }
+
+        public async Task<List<CodeExercise>> GetExercisesWithGradesByCourse(int courseId, int userId)
+        {
+            return await _ctx.CodeExercises
+                .Include(ce => ce.StudentAnswers.Where(sa => sa.StudentInCourse.UserId == userId))
+                .Where(ce => ce.CourseId == courseId)
+                .ToListAsync();
+        }
+
+        public async Task<CodeExercise?> GetExerciseWithStudentAnswer(int exerciseId, int userId)
+        {
+            return await _ctx.CodeExercises
+                .Include(ex => ex.EdgeCases) 
+                .Include(ex => ex.StudentAnswers
+                    .Where(sa => sa.StudentInCourse.UserId == userId)
+                    .OrderBy(sa => sa.Id) 
+                    .Take(1))
+                .FirstOrDefaultAsync(ex => ex.Id == exerciseId);
+        }
     }
 }

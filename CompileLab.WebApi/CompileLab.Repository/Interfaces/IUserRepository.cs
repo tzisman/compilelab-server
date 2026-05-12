@@ -11,7 +11,7 @@ namespace CompileLab.Repository.Interfaces
     {
         public Task<User> GetUserByEmail(string email);
 
-        Task<List<Course>> GetCourseOfUser(int id);
+        Task<List<UserInCourse>> GetCourseOfUser(int id);
         Task<List<Course>> GetCourseOfLecturer(int id);
         Task<List<UserInCourse>> GetReqwestOfUser(int id);
 

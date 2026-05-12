@@ -3,6 +3,7 @@ using CompileLab.Service.Interfaces;
 using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace CompileLab.WebApi.Controllers
 {
@@ -75,6 +76,36 @@ namespace CompileLab.WebApi.Controllers
         public async Task<IActionResult> GetByCourseId(int courseId)
         {
             var result = await _service.GetExercisesByCourseId(courseId);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return Ok(result);
+        }
+
+        [HttpGet("studentExercises/{courseId}")]
+        public async Task<IActionResult> GetMyExercises(int courseId)
+        {
+            var userId = User.GetUserId();
+            if (userId == null)
+            {
+                return Unauthorized("You are not logged in.");
+            }
+            var result = await _service.GetStudentExerciseListAsync(courseId, userId.Value);
+            return Ok(result);
+        }
+
+
+        [HttpGet("{exerciseId}/student/")]
+        public async Task<IActionResult> GetExerciseForStudent(int exerciseId)
+        {
+            var userId = User.GetUserId();
+            if (userId == null)
+            {
+                return Unauthorized("You are not logged in.");
+            }
+
+            var result = await _service.GetExerciseForStudent(exerciseId, userId.Value);
             if (result == null)
             {
                 return NotFound();
