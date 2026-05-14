@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Repository
 {
-    public class StudentAnswerRepository(IContext context) : IRepository<StudentAnswer>
+    public class StudentAnswerRepository(IContext context) : IAnswerRepository
     {
         private readonly IContext _ctx = context;
 
@@ -75,6 +75,27 @@ namespace CompileLab.Repository
 
             await _ctx.Save();
             return await GetById(id);
+        }
+
+        public async Task<StudentAnswer> UpdateMark(int answerId, double mark)
+        {
+            var answer = await _ctx.StudentAnswers
+                .Include(a => a.Exercise)
+                    .ThenInclude(ex => ex.Course)
+                        .ThenInclude(c => c.Lecturer)
+                .Include(a => a.Exercise)
+                    .ThenInclude(ex => ex.EdgeCases)
+                .Include(a => a.StudentInCourse)
+                    .ThenInclude(uic => uic.Student).FirstOrDefaultAsync(x => x.Id == answerId);
+
+            if (answer == null)
+            {
+                return null;
+            }
+            answer.Mark = mark;
+            await _ctx.Save();
+
+            return answer;
         }
     }
 }

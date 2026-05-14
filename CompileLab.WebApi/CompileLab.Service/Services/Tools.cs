@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
@@ -110,6 +111,7 @@ namespace CompileLab.Service.Services
         {
             ProgrammingLanguage pl = studentAnswer.Exercise.Language;
             await _semaphore.WaitAsync();
+
             string testerImage = pl switch
             {
                 ProgrammingLanguage.csharp => "tester-csharp:1.0",
@@ -138,12 +140,11 @@ namespace CompileLab.Service.Services
                 var psi = new ProcessStartInfo
                 {
                     FileName = "docker",
-
                     Arguments = $"run --rm --init --name test_{runId} -i " +
-                    $"{ramLimit} {cpuLimit} {network} {readOnly} {tempFs} {user} " +
-                    $"-v \"{mountSource}:/app:ro\" " +
-                    $"{testerImage} " +
-                    $"{runCommand}",
+                                $"{ramLimit} {cpuLimit} {network} {readOnly} {tempFs} {user} " +
+                                $"-v \"{mountSource}:/app:ro\" " +
+                                $"{testerImage} " +
+                                $"{runCommand}",
                     RedirectStandardInput = true,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
@@ -164,7 +165,7 @@ namespace CompileLab.Service.Services
                 var outputTask = process.StandardOutput.ReadToEndAsync();
                 var errorTask = process.StandardError.ReadToEndAsync();
 
-                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10)); // טיימר חיצוני של 10 שניות לכל התהליך
+                using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
                 try
                 {
                     await process.WaitForExitAsync(cts.Token);
@@ -174,29 +175,29 @@ namespace CompileLab.Service.Services
                     if (!process.HasExited) process.Kill(true);
                     return (false, "Time Limit Exceeded");
                 }
+
                 string rawOutput = await outputTask;
                 string rawError = await errorTask;
-                string fullLog = rawOutput + rawError;
 
+                // בדיקה אם הריצה הצליחה
                 if (process.ExitCode == 0)
                 {
-                    if(pl == ProgrammingLanguage.python)
-                    {
-                        return (true, CleanPythonRuntimeError(rawOutput));
-                    }
+                    // אם הצליח, תמיד נחזיר פלט נקי בלי "Unknown Line"
                     return (true, CleanOutput(rawOutput));
                 }
-                if(pl == ProgrammingLanguage.python)
+
+                // אם נכשל, נבצע ניקוי שגיאות לפי השפה
+                if (pl == ProgrammingLanguage.python)
                 {
                     return (false, CleanPythonRuntimeError(rawError));
                 }
+
                 return (false, CleanOutput(rawError));
             }
             finally
             {
                 _semaphore.Release();
             }
-
         }
         public static async Task<AnswerMarkDto> Test(ICollection<TestCase> cases, string folderPath, StudentAnswer studentAnswer)
         {
@@ -270,8 +271,13 @@ namespace CompileLab.Service.Services
 
         public static bool CheckingSucces(string result, string expectedOutput)
         {
-            return result.Trim() == expectedOutput.Trim();
+           
+            string normalizedResult = Regex.Replace(result.Trim(), @"\s+", " ");
+            string normalizedExpected = Regex.Replace(expectedOutput.Trim(), @"\s+", " ");
+
+            return normalizedResult == normalizedExpected;
         }
+
         public static string CleanOutput(string raw)
         {
             if (string.IsNullOrWhiteSpace(raw)) return "";

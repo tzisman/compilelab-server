@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Authorization
 {
-    public class AnswerAuthorization(IRepository<StudentAnswer> repository) : IAnswerAuthorization
+    public class AnswerAuthorization(IAnswerRepository repository) : IAnswerAuthorization
     {
-       private readonly IRepository<StudentAnswer> _repository = repository;
+       private readonly IAnswerRepository _repository = repository;
 
         public async Task<bool> IsAllowedToChange(int answerId)
         {

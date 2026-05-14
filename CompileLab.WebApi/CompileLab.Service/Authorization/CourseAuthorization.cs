@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Authorization
 {
-    internal class CourseAuthorization(IRepository<Course> repository) : IAuthorization
+    internal class CourseAuthorization(ICourseRepository repository) : IAuthorization
     {
-        private readonly IRepository<Course> _repository = repository;
+        private readonly ICourseRepository _repository = repository;
         public async Task<bool> IsOwnerOf(int targetId, int userId)
         {
             var result = await _repository.GetById(targetId);

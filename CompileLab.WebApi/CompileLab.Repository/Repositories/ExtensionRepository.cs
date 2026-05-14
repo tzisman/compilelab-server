@@ -14,11 +14,11 @@ namespace CompileLab.Repository.Repositories
         public static IServiceCollection AddRepository(this IServiceCollection services)
         {
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IRepository<Course>, CourseRepository>();
+            services.AddScoped<ICourseRepository, CourseRepository>();
             services.AddScoped<IUserInCourseRepository, UserInCourseRepository>();
             services.AddScoped<IExerciseRepository, CodeExerciseRepository>();
             services.AddScoped<ITestCaseRepository, TestCaseRepository>();
-            services.AddScoped<IRepository<StudentAnswer>, StudentAnswerRepository>();
+            services.AddScoped<IAnswerRepository, StudentAnswerRepository>();
             return services;
         }
     }

@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class StudentAnswerService(IRepository<StudentAnswer> repository, IMapper mapper,
+    public class StudentAnswerService(IAnswerRepository repository, IMapper mapper,
         IAnswerAuthorization answerAuth,
         IUserInCourseAuthorization uicAuth
         ) : IStudentAnswerService
     {
-        private readonly IRepository<StudentAnswer> _repository = repository;
+        private readonly IAnswerRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
         private readonly IUserInCourseAuthorization _uicAuth = uicAuth;
         private readonly IAnswerAuthorization _answerAuth = answerAuth;
@@ -66,7 +66,10 @@ namespace CompileLab.Service.Services
             var answer = await _repository.GetById(id);
             if(answer == null)
                 throw new KeyNotFoundException();
-            return await Tools.GetMark(answer);
+
+           var mark = await Tools.GetMark(answer);
+           var updateItem =await _repository.UpdateMark(id, mark.Mark);
+           return mark;
         }
 
         public async Task<StudentAnswerDto> UpdateItem(int id, StudentAnswerDto item, int userId)

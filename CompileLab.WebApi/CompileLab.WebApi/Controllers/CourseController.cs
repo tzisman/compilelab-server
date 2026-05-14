@@ -28,12 +28,12 @@ namespace CompileLab.WebApi.Controllers
         }
         
         [HttpGet]
-        public async Task<IActionResult> GetALl()
+        public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int size = 10, [FromQuery] string search = null)
         {
-            var courses = await _service.GetAll();
+            var courses = await _service.GetAll(page, size, search);
             return Ok(courses);
         }
-        
+
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {

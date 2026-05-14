@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Service.Services
 {
-    public class CourseService(IRepository<Course> repository, IMapper mapper,
+    public class CourseService(ICourseRepository repository, IMapper mapper,
         [FromKeyedServices("course")] IAuthorization courseAuth
         ) : ICourseService
     {
-        private readonly IRepository<Course> _repository = repository;
+        private readonly ICourseRepository _repository = repository;
         private readonly IMapper _mapper = mapper;
         IAuthorization _courseAuth = courseAuth;
 
@@ -47,12 +47,6 @@ namespace CompileLab.Service.Services
             await _repository.DeleteItem(id);
         }
 
-        public async Task<List<CourseDisplayDto>> GetAll()
-        {
-            var courses = await _repository.GetAll();
-            var coursesDto = _mapper.Map<List<CourseDisplayDto>>(courses);
-            return coursesDto;
-        }
 
         public async Task<CourseDisplayDto> GetById(int id)
         {
@@ -74,6 +68,10 @@ namespace CompileLab.Service.Services
             return courseDto;
         }
 
-        
+        public async Task<List<CourseDisplayDto>> GetAll(int page, int size, string search)
+        {
+            var courses = await _repository.GetAll(page, size, search);
+            return _mapper.Map<List<CourseDisplayDto>>(courses);
+        }
     }
 }

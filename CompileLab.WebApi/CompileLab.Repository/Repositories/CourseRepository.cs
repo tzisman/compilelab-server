@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CompileLab.Repository.Repositories
 {
-    public class CourseRepository(IContext context) : IRepository<Course>
+    public class CourseRepository(IContext context) : ICourseRepository
     {
         private readonly IContext _ctx = context;
         public async Task<Course> AddItem(Course item)
@@ -30,12 +30,24 @@ namespace CompileLab.Repository.Repositories
             }
         }
 
-        public async Task<List<Course>> GetAll()
+        public async Task<List<Course>> GetAll(int pageNumber = 1, int pageSize = 10, string? searchTerm = null)
         {
-            return await _ctx.Courses.Include(c => c.Lecturer).Include(c => c.Exercises)
-                .Include(c => c.Studies).ToListAsync();
-        }
+            var query = _ctx.Courses
+                .Include(c => c.Lecturer)
+                .Include(c => c.Exercises)
+                .Include(c => c.Studies)
+                .AsQueryable();
 
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                query = query.Where(c => c.Name.Contains(searchTerm));
+            }
+
+            return await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
 
         public async Task<Course> GetById(int id)
         {
