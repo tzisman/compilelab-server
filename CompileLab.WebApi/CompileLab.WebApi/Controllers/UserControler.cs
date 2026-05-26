@@ -10,6 +10,7 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace CompileLab.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class UserController(IUserService service) : ControllerBase
@@ -35,7 +36,7 @@ namespace CompileLab.WebApi.Controllers
             return Ok(new {token = token, user = newUser});
         }
 
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetALl()
         {
@@ -43,25 +44,7 @@ namespace CompileLab.WebApi.Controllers
             return Ok(users);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
-        {
-            var userId = User.GetUserId();
-
-            var isAdmin = User.IsInRole("Admin");
-
-            if (userId == null || (userId != id && !isAdmin))
-            {
-                return Forbid();
-            }
-
-            var user = await _service.GetById(id);
-            if (user == null)
-            {
-                return NotFound();
-            }
-            return Ok(user);
-        }
+        
         [HttpGet("courses")]
         public async Task<IActionResult> GetCoursesByUser()
         {
@@ -104,21 +87,6 @@ namespace CompileLab.WebApi.Controllers
             return Ok(courses);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = User.GetUserId();
-
-            var isAdmin = User.IsInRole("Admin");
-
-            if (userId == null || (userId != id && !isAdmin))
-            {
-                return Forbid();
-            }
-
-            await _service.DeleteItem(id);
-            return NoContent();
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] UserDto user, int id)

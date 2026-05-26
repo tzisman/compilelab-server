@@ -4,11 +4,13 @@ using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
 using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CompileLab.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CourseController(ICourseService service) : ControllerBase
@@ -32,29 +34,6 @@ namespace CompileLab.WebApi.Controllers
         {
             var courses = await _service.GetAll(page, size, search);
             return Ok(courses);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
-        {
-            var course = await _service.GetById(id);
-            if (course == null)
-            {
-                return NotFound();
-            }
-            return Ok(course);
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = User.GetUserId();
-            if (userId == null)
-            {
-                return Unauthorized("You are not logged in.");
-            }
-            await _service.DeleteItem(id, userId.Value);
-            return NoContent();  
         }
 
         [HttpPut("{id}")]

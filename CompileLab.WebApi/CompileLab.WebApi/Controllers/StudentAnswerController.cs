@@ -1,10 +1,12 @@
 using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
 using CompileLab.WebApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompileLab.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class StudentAnswerController(IStudentAnswerService service) : ControllerBase
@@ -23,14 +25,6 @@ namespace CompileLab.WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-
-            var studentAnswers = await _service.GetAll();
-            return Ok(studentAnswers);
-
-        }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
@@ -54,17 +48,6 @@ namespace CompileLab.WebApi.Controllers
             return Ok(mark);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = User.GetUserId();
-            if (userId == null)
-            {
-                return Unauthorized("You are not logged in.");
-            }
-            await _service.DeleteItem(id, userId.Value);
-            return NoContent();
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] StudentAnswerDto studentAnswer, int id)

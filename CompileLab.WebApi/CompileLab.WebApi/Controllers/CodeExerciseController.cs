@@ -2,11 +2,13 @@ using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
 using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace CompileLab.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CodeExerciseController(IExerciseService service) : ControllerBase
@@ -44,17 +46,6 @@ namespace CompileLab.WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var userId = User.GetUserId();
-            if (userId == null)
-            {
-                return Unauthorized("You are not logged in.");
-            }
-            await _service.DeleteItem(id, userId.Value);
-            return NoContent();
-        }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] CodeExerciseDto codeExerciseDto, int id)

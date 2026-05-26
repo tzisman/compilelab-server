@@ -2,10 +2,12 @@ using CompileLab.Service.Dto;
 using CompileLab.Service.Interfaces;
 using CompileLab.Service.Services;
 using CompileLab.WebApi.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CompileLab.WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class TestCaseController(ITestCaseService service) : ControllerBase
@@ -20,24 +22,6 @@ namespace CompileLab.WebApi.Controllers
                 return Unauthorized("You are not logged in.");
             }
             var result = await _service.AddItem(testCaseDto, userId.Value);
-            return Ok(result);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetALl()
-        {
-            var TestCasesDto = await _service.GetAll();
-            return Ok(TestCasesDto);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
-        {
-            var result = await _service.GetById(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
             return Ok(result);
         }
 

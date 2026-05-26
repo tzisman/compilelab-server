@@ -28,11 +28,12 @@ namespace CompileLab.Service.Services
                 throw new ForbiddenAccessException("User is not authorized to add a course.");
             }
 
-            //var uic = await _repository.GetByUserAndCourse(item.CourseId, item.UserId);
-            //if (uic != null)
-            //{
-            //    throw new InvalidOperationException("You have already signed up for this course.");
-            //}
+            var uic = await _repository.GetByUserAndCourse(item.CourseId, item.UserId);
+
+            if (uic != null)
+            {
+               throw new InvalidOperationException("You have already signed up for this course.");
+            }
 
             var userInCourse = _mapper.Map<UserInCourse>(item);
             var result = await _repository.AddItem(userInCourse);

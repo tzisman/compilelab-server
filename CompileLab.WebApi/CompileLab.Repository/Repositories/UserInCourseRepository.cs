@@ -17,7 +17,6 @@ namespace CompileLab.Repository.Repositories
         {
             item.Status = CourseStatus.sent;
             item.RequestDate = DateTime.UtcNow;
-            //item.Status = CourseStatus.Approved;
             await _ctx.UserInCourses.AddAsync(item);
             await _ctx.Save();
             return item;
